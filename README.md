@@ -8,5 +8,9 @@ Todo
 ------------
 
 * Find/create/purchase a sprite that does the explosion and then makes a crater
-* Figure out how to animate MKOverlayRenderer
-* Pinch to zoom (possibly working, but I'm on the simulator)
+* Added timer (one-bomb per second or something)
+* Add score and gamecenter support 
+	Score = total number of bombs exploded
+* Added hamburger menu
+	Quick jump to popular locations
+* Add bomb icon with infinty sign (ammo ammount)
