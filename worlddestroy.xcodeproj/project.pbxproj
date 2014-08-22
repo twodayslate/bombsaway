@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		113458A819A7AC2B009D29AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458A719A7AC2B009D29AB /* Foundation.framework */; };
+		113458AA19A7AC2B009D29AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458A919A7AC2B009D29AB /* CoreGraphics.framework */; };
+		113458AC19A7AC2B009D29AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458AB19A7AC2B009D29AB /* UIKit.framework */; };
+		113458B219A7AC2B009D29AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 113458B019A7AC2B009D29AB /* InfoPlist.strings */; };
+		113458B419A7AC2B009D29AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458B319A7AC2B009D29AB /* main.m */; };
+		113458B819A7AC2B009D29AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458B719A7AC2B009D29AB /* AppDelegate.m */; };
+		113458BA19A7AC2B009D29AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 113458B919A7AC2B009D29AB /* Images.xcassets */; };
+		113458C119A7AC2B009D29AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458C019A7AC2B009D29AB /* XCTest.framework */; };
+		113458C219A7AC2B009D29AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458A719A7AC2B009D29AB /* Foundation.framework */; };
+		113458C319A7AC2B009D29AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458AB19A7AC2B009D29AB /* UIKit.framework */; };
+		113458CB19A7AC2B009D29AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 113458C919A7AC2B009D29AB /* InfoPlist.strings */; };
+		113458CD19A7AC2B009D29AB /* worlddestroyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458CC19A7AC2B009D29AB /* worlddestroyTests.m */; };
+		113458DE19A7AC54009D29AB /* atari_boom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 113458D619A7AC54009D29AB /* atari_boom.mp3 */; };
+		113458DF19A7AC54009D29AB /* AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */; };
+		113458E019A7AC54009D29AB /* 160x120.gif in Resources */ = {isa = PBXBuildFile; fileRef = 113458D919A7AC54009D29AB /* 160x120.gif */; };
+		113458E119A7AC54009D29AB /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */; };
+		113458E219A7AC54009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458DD19A7AC54009D29AB /* ViewController.m */; };
+		113458E419A7AEE7009D29AB /* FWqc3Kk.gif in Resources */ = {isa = PBXBuildFile; fileRef = 113458E319A7AEE7009D29AB /* FWqc3Kk.gif */; };
+		113458E619A7AFF8009D29AB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458E519A7AFF8009D29AB /* ImageIO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		113458C419A7AC2B009D29AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1134589C19A7AC2B009D29AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 113458A319A7AC2B009D29AB;
+			remoteInfo = worlddestroy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		113458A419A7AC2B009D29AB /* worlddestroy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worlddestroy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		113458A719A7AC2B009D29AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		113458A919A7AC2B009D29AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		113458AB19A7AC2B009D29AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		113458AF19A7AC2B009D29AB /* worlddestroy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "worlddestroy-Info.plist"; sourceTree = "<group>"; };
+		113458B119A7AC2B009D29AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		113458B319A7AC2B009D29AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		113458B519A7AC2B009D29AB /* worlddestroy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "worlddestroy-Prefix.pch"; sourceTree = "<group>"; };
+		113458B619A7AC2B009D29AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		113458B719A7AC2B009D29AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		113458B919A7AC2B009D29AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		113458BF19A7AC2B009D29AB /* worlddestroyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = worlddestroyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		113458C019A7AC2B009D29AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		113458C819A7AC2B009D29AB /* worlddestroyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "worlddestroyTests-Info.plist"; sourceTree = "<group>"; };
+		113458CA19A7AC2B009D29AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		113458CC19A7AC2B009D29AB /* worlddestroyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = worlddestroyTests.m; sourceTree = "<group>"; };
+		113458D619A7AC54009D29AB /* atari_boom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = atari_boom.mp3; path = ../../../Downloads/atari_boom.mp3; sourceTree = "<group>"; };
+		113458D719A7AC54009D29AB /* AnimatedGIFImageSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimatedGIFImageSerialization.h; path = "../../../Downloads/AnimatedGIFImageSerialization-master/AnimatedGIFImageSerialization/AnimatedGIFImageSerialization.h"; sourceTree = "<group>"; };
+		113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimatedGIFImageSerialization.m; path = "../../../Downloads/AnimatedGIFImageSerialization-master/AnimatedGIFImageSerialization/AnimatedGIFImageSerialization.m"; sourceTree = "<group>"; };
+		113458D919A7AC54009D29AB /* 160x120.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 160x120.gif; path = ../../../Downloads/explosion1_package/package/gifs/160x120.gif; sourceTree = "<group>"; };
+		113458DA19A7AC54009D29AB /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+animatedGIF.h"; path = "../../../Downloads/uiimage-from-animated-gif-master/uiimage-from-animated-gif/UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+animatedGIF.m"; path = "../../../Downloads/uiimage-from-animated-gif-master/uiimage-from-animated-gif/UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		113458DC19A7AC54009D29AB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../worlddestruction/worlddestruction/ViewController.h; sourceTree = "<group>"; };
+		113458DD19A7AC54009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../worlddestruction/worlddestruction/ViewController.m; sourceTree = "<group>"; };
+		113458E319A7AEE7009D29AB /* FWqc3Kk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = FWqc3Kk.gif; path = ../../worlddestruction/images/FWqc3Kk.gif; sourceTree = "<group>"; };
+		113458E519A7AFF8009D29AB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		113458A119A7AC2B009D29AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113458E619A7AFF8009D29AB /* ImageIO.framework in Frameworks */,
+				113458AA19A7AC2B009D29AB /* CoreGraphics.framework in Frameworks */,
+				113458AC19A7AC2B009D29AB /* UIKit.framework in Frameworks */,
+				113458A819A7AC2B009D29AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		113458BC19A7AC2B009D29AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113458C119A7AC2B009D29AB /* XCTest.framework in Frameworks */,
+				113458C319A7AC2B009D29AB /* UIKit.framework in Frameworks */,
+				113458C219A7AC2B009D29AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1134589B19A7AC2B009D29AB = {
+			isa = PBXGroup;
+			children = (
+				113458AD19A7AC2B009D29AB /* worlddestroy */,
+				113458C619A7AC2B009D29AB /* worlddestroyTests */,
+				113458A619A7AC2B009D29AB /* Frameworks */,
+				113458A519A7AC2B009D29AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		113458A519A7AC2B009D29AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				113458A419A7AC2B009D29AB /* worlddestroy.app */,
+				113458BF19A7AC2B009D29AB /* worlddestroyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		113458A619A7AC2B009D29AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				113458E519A7AFF8009D29AB /* ImageIO.framework */,
+				113458A719A7AC2B009D29AB /* Foundation.framework */,
+				113458A919A7AC2B009D29AB /* CoreGraphics.framework */,
+				113458AB19A7AC2B009D29AB /* UIKit.framework */,
+				113458C019A7AC2B009D29AB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		113458AD19A7AC2B009D29AB /* worlddestroy */ = {
+			isa = PBXGroup;
+			children = (
+				113458E319A7AEE7009D29AB /* FWqc3Kk.gif */,
+				113458D619A7AC54009D29AB /* atari_boom.mp3 */,
+				113458D719A7AC54009D29AB /* AnimatedGIFImageSerialization.h */,
+				113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */,
+				113458D919A7AC54009D29AB /* 160x120.gif */,
+				113458DA19A7AC54009D29AB /* UIImage+animatedGIF.h */,
+				113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */,
+				113458DC19A7AC54009D29AB /* ViewController.h */,
+				113458DD19A7AC54009D29AB /* ViewController.m */,
+				113458B619A7AC2B009D29AB /* AppDelegate.h */,
+				113458B719A7AC2B009D29AB /* AppDelegate.m */,
+				113458B919A7AC2B009D29AB /* Images.xcassets */,
+				113458AE19A7AC2B009D29AB /* Supporting Files */,
+			);
+			path = worlddestroy;
+			sourceTree = "<group>";
+		};
+		113458AE19A7AC2B009D29AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				113458AF19A7AC2B009D29AB /* worlddestroy-Info.plist */,
+				113458B019A7AC2B009D29AB /* InfoPlist.strings */,
+				113458B319A7AC2B009D29AB /* main.m */,
+				113458B519A7AC2B009D29AB /* worlddestroy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		113458C619A7AC2B009D29AB /* worlddestroyTests */ = {
+			isa = PBXGroup;
+			children = (
+				113458CC19A7AC2B009D29AB /* worlddestroyTests.m */,
+				113458C719A7AC2B009D29AB /* Supporting Files */,
+			);
+			path = worlddestroyTests;
+			sourceTree = "<group>";
+		};
+		113458C719A7AC2B009D29AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				113458C819A7AC2B009D29AB /* worlddestroyTests-Info.plist */,
+				113458C919A7AC2B009D29AB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		113458A319A7AC2B009D29AB /* worlddestroy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 113458D019A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroy" */;
+			buildPhases = (
+				113458A019A7AC2B009D29AB /* Sources */,
+				113458A119A7AC2B009D29AB /* Frameworks */,
+				113458A219A7AC2B009D29AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = worlddestroy;
+			productName = worlddestroy;
+			productReference = 113458A419A7AC2B009D29AB /* worlddestroy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		113458BE19A7AC2B009D29AB /* worlddestroyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 113458D319A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroyTests" */;
+			buildPhases = (
+				113458BB19A7AC2B009D29AB /* Sources */,
+				113458BC19A7AC2B009D29AB /* Frameworks */,
+				113458BD19A7AC2B009D29AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				113458C519A7AC2B009D29AB /* PBXTargetDependency */,
+			);
+			name = worlddestroyTests;
+			productName = worlddestroyTests;
+			productReference = 113458BF19A7AC2B009D29AB /* worlddestroyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1134589C19A7AC2B009D29AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = PRNDL;
+				TargetAttributes = {
+					113458BE19A7AC2B009D29AB = {
+						TestTargetID = 113458A319A7AC2B009D29AB;
+					};
+				};
+			};
+			buildConfigurationList = 1134589F19A7AC2B009D29AB /* Build configuration list for PBXProject "worlddestroy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1134589B19A7AC2B009D29AB;
+			productRefGroup = 113458A519A7AC2B009D29AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				113458A319A7AC2B009D29AB /* worlddestroy */,
+				113458BE19A7AC2B009D29AB /* worlddestroyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		113458A219A7AC2B009D29AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113458B219A7AC2B009D29AB /* InfoPlist.strings in Resources */,
+				113458E019A7AC54009D29AB /* 160x120.gif in Resources */,
+				113458E419A7AEE7009D29AB /* FWqc3Kk.gif in Resources */,
+				113458DE19A7AC54009D29AB /* atari_boom.mp3 in Resources */,
+				113458BA19A7AC2B009D29AB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		113458BD19A7AC2B009D29AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113458CB19A7AC2B009D29AB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		113458A019A7AC2B009D29AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113458DF19A7AC54009D29AB /* AnimatedGIFImageSerialization.m in Sources */,
+				113458E119A7AC54009D29AB /* UIImage+animatedGIF.m in Sources */,
+				113458B819A7AC2B009D29AB /* AppDelegate.m in Sources */,
+				113458B419A7AC2B009D29AB /* main.m in Sources */,
+				113458E219A7AC54009D29AB /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		113458BB19A7AC2B009D29AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113458CD19A7AC2B009D29AB /* worlddestroyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		113458C519A7AC2B009D29AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 113458A319A7AC2B009D29AB /* worlddestroy */;
+			targetProxy = 113458C419A7AC2B009D29AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		113458B019A7AC2B009D29AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				113458B119A7AC2B009D29AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		113458C919A7AC2B009D29AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				113458CA19A7AC2B009D29AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		113458CE19A7AC2B009D29AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		113458CF19A7AC2B009D29AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		113458D119A7AC2B009D29AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "worlddestroy/worlddestroy-Prefix.pch";
+				INFOPLIST_FILE = "worlddestroy/worlddestroy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		113458D219A7AC2B009D29AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "worlddestroy/worlddestroy-Prefix.pch";
+				INFOPLIST_FILE = "worlddestroy/worlddestroy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		113458D419A7AC2B009D29AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/worlddestroy.app/worlddestroy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "worlddestroy/worlddestroy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "worlddestroyTests/worlddestroyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		113458D519A7AC2B009D29AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/worlddestroy.app/worlddestroy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "worlddestroy/worlddestroy-Prefix.pch";
+				INFOPLIST_FILE = "worlddestroyTests/worlddestroyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1134589F19A7AC2B009D29AB /* Build configuration list for PBXProject "worlddestroy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				113458CE19A7AC2B009D29AB /* Debug */,
+				113458CF19A7AC2B009D29AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		113458D019A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				113458D119A7AC2B009D29AB /* Debug */,
+				113458D219A7AC2B009D29AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		113458D319A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				113458D419A7AC2B009D29AB /* Debug */,
+				113458D519A7AC2B009D29AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1134589C19A7AC2B009D29AB /* Project object */;
+}
