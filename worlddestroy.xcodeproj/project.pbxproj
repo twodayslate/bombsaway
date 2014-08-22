@@ -23,9 +23,9 @@
 		113458DF19A7AC54009D29AB /* AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */; };
 		113458E019A7AC54009D29AB /* 160x120.gif in Resources */ = {isa = PBXBuildFile; fileRef = 113458D919A7AC54009D29AB /* 160x120.gif */; };
 		113458E119A7AC54009D29AB /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */; };
-		113458E219A7AC54009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458DD19A7AC54009D29AB /* ViewController.m */; };
-		113458E419A7AEE7009D29AB /* FWqc3Kk.gif in Resources */ = {isa = PBXBuildFile; fileRef = 113458E319A7AEE7009D29AB /* FWqc3Kk.gif */; };
 		113458E619A7AFF8009D29AB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458E519A7AFF8009D29AB /* ImageIO.framework */; };
+		113458E919A7D713009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458E819A7D713009D29AB /* ViewController.m */; };
+		113458EB19A7D748009D29AB /* FWqc3Kk.gif in Resources */ = {isa = PBXBuildFile; fileRef = 113458EA19A7D748009D29AB /* FWqc3Kk.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +61,10 @@
 		113458D919A7AC54009D29AB /* 160x120.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 160x120.gif; path = ../../../Downloads/explosion1_package/package/gifs/160x120.gif; sourceTree = "<group>"; };
 		113458DA19A7AC54009D29AB /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+animatedGIF.h"; path = "../../../Downloads/uiimage-from-animated-gif-master/uiimage-from-animated-gif/UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+animatedGIF.m"; path = "../../../Downloads/uiimage-from-animated-gif-master/uiimage-from-animated-gif/UIImage+animatedGIF.m"; sourceTree = "<group>"; };
-		113458DC19A7AC54009D29AB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../worlddestruction/worlddestruction/ViewController.h; sourceTree = "<group>"; };
-		113458DD19A7AC54009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../worlddestruction/worlddestruction/ViewController.m; sourceTree = "<group>"; };
-		113458E319A7AEE7009D29AB /* FWqc3Kk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = FWqc3Kk.gif; path = ../../worlddestruction/images/FWqc3Kk.gif; sourceTree = "<group>"; };
 		113458E519A7AFF8009D29AB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		113458E719A7D713009D29AB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../.Trash/worlddestruction/worlddestruction/ViewController.h; sourceTree = "<group>"; };
+		113458E819A7D713009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../.Trash/worlddestruction/worlddestruction/ViewController.m; sourceTree = "<group>"; };
+		113458EA19A7D748009D29AB /* FWqc3Kk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = FWqc3Kk.gif; path = ../../../Desktop/FWqc3Kk.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,15 +126,15 @@
 		113458AD19A7AC2B009D29AB /* worlddestroy */ = {
 			isa = PBXGroup;
 			children = (
-				113458E319A7AEE7009D29AB /* FWqc3Kk.gif */,
+				113458EA19A7D748009D29AB /* FWqc3Kk.gif */,
+				113458E719A7D713009D29AB /* ViewController.h */,
+				113458E819A7D713009D29AB /* ViewController.m */,
 				113458D619A7AC54009D29AB /* atari_boom.mp3 */,
 				113458D719A7AC54009D29AB /* AnimatedGIFImageSerialization.h */,
 				113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */,
 				113458D919A7AC54009D29AB /* 160x120.gif */,
 				113458DA19A7AC54009D29AB /* UIImage+animatedGIF.h */,
 				113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */,
-				113458DC19A7AC54009D29AB /* ViewController.h */,
-				113458DD19A7AC54009D29AB /* ViewController.m */,
 				113458B619A7AC2B009D29AB /* AppDelegate.h */,
 				113458B719A7AC2B009D29AB /* AppDelegate.m */,
 				113458B919A7AC2B009D29AB /* Images.xcassets */,
@@ -249,7 +249,7 @@
 			files = (
 				113458B219A7AC2B009D29AB /* InfoPlist.strings in Resources */,
 				113458E019A7AC54009D29AB /* 160x120.gif in Resources */,
-				113458E419A7AEE7009D29AB /* FWqc3Kk.gif in Resources */,
+				113458EB19A7D748009D29AB /* FWqc3Kk.gif in Resources */,
 				113458DE19A7AC54009D29AB /* atari_boom.mp3 in Resources */,
 				113458BA19A7AC2B009D29AB /* Images.xcassets in Resources */,
 			);
@@ -274,7 +274,7 @@
 				113458E119A7AC54009D29AB /* UIImage+animatedGIF.m in Sources */,
 				113458B819A7AC2B009D29AB /* AppDelegate.m in Sources */,
 				113458B419A7AC2B009D29AB /* main.m in Sources */,
-				113458E219A7AC54009D29AB /* ViewController.m in Sources */,
+				113458E919A7D713009D29AB /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
