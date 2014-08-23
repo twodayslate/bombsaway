@@ -25,7 +25,8 @@ static BOOL shake = NO;
 //    type = [list objectAtIndex:0];
 //    int count = [[list objectAtIndex:1] integerValue];
     double zoomLevel = [annotation.subtitle doubleValue];
-    double size = zoomLevel * 0.03;
+    NSLog(@"zoomLevel = %f",zoomLevel);
+    double size = zoomLevel * 15000;
     
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
 
@@ -79,7 +80,7 @@ static BOOL shake = NO;
         //    type = [list objectAtIndex:0];
         //    int count = [[list objectAtIndex:1] integerValue];
         double zoomLevel = [annotation.subtitle doubleValue];
-        double size = zoomLevel * 0.03;
+        double size = zoomLevel * 15000;
         
         MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
         CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
@@ -175,10 +176,10 @@ static BOOL shake = NO;
         
         point1.coordinate = tapPoint;
         point1.title = @"default";
-        if(_mapView.visibleMapRect.size.width > _mapView.visibleMapRect.size.height)
-            point1.subtitle = [NSString stringWithFormat:@"%f",_mapView.visibleMapRect.size.width];
+        if(_mapView.region.span.latitudeDelta > _mapView.region.span.longitudeDelta)
+            point1.subtitle = [NSString stringWithFormat:@"%f",(double)_mapView.region.span.latitudeDelta];
         else
-            point1.subtitle = [NSString stringWithFormat:@"%f",_mapView.visibleMapRect.size.height];
+            point1.subtitle = [NSString stringWithFormat:@"%f",(double)_mapView.region.span.longitudeDelta];
         
         
         //MKCircle *overlay = [MKCircle circleWithCenterCoordinate:tapPoint radius:1000];

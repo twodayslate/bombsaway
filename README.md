@@ -18,4 +18,4 @@ Bugs
 
 * The first bomb's timer selector doesn't fire at the correct time            
 * After explosion, switching to crater image causes a flash of nothingnes
-* Save size (currently messed up if go to either pole)
+* Save size (currently messed up if go to either pole) http://stackoverflow.com/a/3910153/193772
