@@ -7,7 +7,8 @@ A simple iOS game, tap to destroy!
 Todo
 ------------
 
-* Bug where first bomb doesn't go off
+* Bug where bomb timer isn't perfect
+* Bug where explosion to crater flashes
 * Added visible counter
 * Add score and gamecenter support 
 	Score = total number of bombs exploded
