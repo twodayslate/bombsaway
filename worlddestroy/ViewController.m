@@ -15,9 +15,11 @@
 @implementation ViewController
 
 static BOOL shake = NO;
-static BOOL canBomb = YES;
+static BOOL canBomb = NO;
 
 -(void)addAnimatedOverlayToAnnotation:(id<MKAnnotation>)annotation{
+    
+    [_stillExploding addObject:annotation];
     //get a frame around the annotation
     //NSString *type = annotation.title;
 //    NSArray *list = [type componentsSeparatedByString:@","];
@@ -43,16 +45,23 @@ static BOOL canBomb = YES;
     //add to the map and start the animation
     if(!_craters) _craters = [[NSMutableArray alloc] init];
     [_craters addObject:imageView];
-    if(!_stillExploding) _stillExploding = [[NSMutableArray alloc] init];
-    [_stillExploding addObject:annotation];
-    [self performSelector:@selector(doneExploding:) withObject:@[annotation,imageView] afterDelay:1.09];
+    
+    
+    //[self performSelector:@selector(doneExploding:) withObject:@[annotation,imageView] afterDelay:1.09];
+    
+    NSMutableDictionary *cb = [[NSMutableDictionary alloc] init];
+    [cb setObject:annotation forKey:@"annotation"];
+    [cb setObject:imageView forKey:@"imageView"];
+    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(doneExploding:) userInfo:cb repeats:NO];
     [_mapView addSubview:imageView];
 }
 
--(void)doneExploding:(id)arg1 {
-    [[arg1 objectAtIndex:1] removeFromSuperview];
-    [_stillExploding removeObject:[arg1 objectAtIndex:0]];
-    [self addCraterOverlayToAnnotation:[arg1 objectAtIndex:0]];
+-(void)doneExploding:(NSTimer *)timer {
+    NSMutableDictionary *arg1 = [timer userInfo];
+    [_stillExploding removeObject:[arg1 objectForKey:@"annotation"]];
+    [self addCraterOverlayToAnnotation:[arg1 objectForKey:@"annotation"]];
+    [[arg1 objectForKey:@"imageView"] removeFromSuperview];
+    
 }
 
 -(void)setCanBomb {
@@ -76,14 +85,9 @@ static BOOL canBomb = YES;
         //set up the animated overlay
         
         NSURL *url = [[NSBundle mainBundle] URLForResource:@"crater" withExtension:@"gif"];
-        //[UIImage imageWithData:[NSData dataWithContentsOfURL:url];
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
-        //self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
-        //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
         imageView.image = image;
-        //imageView.center = imageView.frame.origin;
-        //[self addSubview:imageView];
         
         //add to the map and start the animation
         if(!_craters) _craters = [[NSMutableArray alloc] init];
@@ -110,6 +114,7 @@ static BOOL canBomb = YES;
 }
 
 -(void) mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
+    NSLog(@"inside region did change");
     [self removeCraters];
     [self readdCraters];
 }
@@ -127,6 +132,8 @@ static BOOL canBomb = YES;
     _mapView.rotateEnabled = YES;
     _mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:_mapView];
+    canBomb = YES;
+    if(!_stillExploding) _stillExploding = [[NSMutableArray alloc] init];
 }
 
 -(IBAction)handleTap:(UITapGestureRecognizer *)recognizer {
@@ -136,6 +143,7 @@ static BOOL canBomb = YES;
 //    NSLog(@"visible rect width = %f",_mapView.visibleMapRect.size.width);
 //    NSLog(@"visible rect height = %f",_mapView.visibleMapRect.size.height);
 //    NSLog(@"zoom level = %f",[_mapView zoomLevel]);
+    
     
     if(canBomb) {
         CGPoint point = [recognizer locationInView:_mapView];
@@ -240,6 +248,7 @@ static BOOL canBomb = YES;
 
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    NSLog(@"inside didRotate");
     [self removeCraters];
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     [self readdCraters];
