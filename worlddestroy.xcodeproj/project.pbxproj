@@ -27,6 +27,8 @@
 		113458E919A7D713009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458E819A7D713009D29AB /* ViewController.m */; };
 		113458EB19A7D748009D29AB /* FWqc3Kk.gif in Resources */ = {isa = PBXBuildFile; fileRef = 113458EA19A7D748009D29AB /* FWqc3Kk.gif */; };
 		113458FA19A7EF54009D29AB /* zac_crater_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 113458F919A7EF54009D29AB /* zac_crater_01.png */; };
+		1134590019A810B7009D29AB /* ExplosionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458FF19A810B7009D29AB /* ExplosionAnnotation.m */; };
+		1134590319A811DC009D29AB /* WorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590219A811DC009D29AB /* WorldMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		113458E819A7D713009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../.Trash/worlddestruction/worlddestruction/ViewController.m; sourceTree = "<group>"; };
 		113458EA19A7D748009D29AB /* FWqc3Kk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = FWqc3Kk.gif; path = ../../../Desktop/FWqc3Kk.gif; sourceTree = "<group>"; };
 		113458F919A7EF54009D29AB /* zac_crater_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zac_crater_01.png; path = ../../../Downloads/zac_crater_01.png; sourceTree = "<group>"; };
+		113458FE19A8102E009D29AB /* ExplosionAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExplosionAnnotation.h; sourceTree = "<group>"; };
+		113458FF19A810B7009D29AB /* ExplosionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplosionAnnotation.m; sourceTree = "<group>"; };
+		1134590119A8114D009D29AB /* WorldMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorldMap.h; sourceTree = "<group>"; };
+		1134590219A811DC009D29AB /* WorldMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldMap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,20 +134,19 @@
 		113458AD19A7AC2B009D29AB /* worlddestroy */ = {
 			isa = PBXGroup;
 			children = (
-				113458F919A7EF54009D29AB /* zac_crater_01.png */,
-				113458EA19A7D748009D29AB /* FWqc3Kk.gif */,
+				1134590419A8128A009D29AB /* gifSupport */,
+				113458FC19A80FAD009D29AB /* sounds */,
+				113458FB19A80F82009D29AB /* images */,
 				113458E719A7D713009D29AB /* ViewController.h */,
 				113458E819A7D713009D29AB /* ViewController.m */,
-				113458D619A7AC54009D29AB /* atari_boom.mp3 */,
-				113458D719A7AC54009D29AB /* AnimatedGIFImageSerialization.h */,
-				113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */,
-				113458D919A7AC54009D29AB /* 160x120.gif */,
-				113458DA19A7AC54009D29AB /* UIImage+animatedGIF.h */,
-				113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */,
+				1134590219A811DC009D29AB /* WorldMap.m */,
+				1134590119A8114D009D29AB /* WorldMap.h */,
+				113458FF19A810B7009D29AB /* ExplosionAnnotation.m */,
 				113458B619A7AC2B009D29AB /* AppDelegate.h */,
 				113458B719A7AC2B009D29AB /* AppDelegate.m */,
 				113458B919A7AC2B009D29AB /* Images.xcassets */,
 				113458AE19A7AC2B009D29AB /* Supporting Files */,
+				113458FE19A8102E009D29AB /* ExplosionAnnotation.h */,
 			);
 			path = worlddestroy;
 			sourceTree = "<group>";
@@ -173,6 +178,35 @@
 				113458C919A7AC2B009D29AB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		113458FB19A80F82009D29AB /* images */ = {
+			isa = PBXGroup;
+			children = (
+				113458D919A7AC54009D29AB /* 160x120.gif */,
+				113458F919A7EF54009D29AB /* zac_crater_01.png */,
+				113458EA19A7D748009D29AB /* FWqc3Kk.gif */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		113458FC19A80FAD009D29AB /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				113458D619A7AC54009D29AB /* atari_boom.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		1134590419A8128A009D29AB /* gifSupport */ = {
+			isa = PBXGroup;
+			children = (
+				113458D719A7AC54009D29AB /* AnimatedGIFImageSerialization.h */,
+				113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */,
+				113458DA19A7AC54009D29AB /* UIImage+animatedGIF.h */,
+				113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */,
+			);
+			name = gifSupport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,10 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1134590319A811DC009D29AB /* WorldMap.m in Sources */,
 				113458DF19A7AC54009D29AB /* AnimatedGIFImageSerialization.m in Sources */,
 				113458E119A7AC54009D29AB /* UIImage+animatedGIF.m in Sources */,
 				113458B819A7AC2B009D29AB /* AppDelegate.m in Sources */,
 				113458B419A7AC2B009D29AB /* main.m in Sources */,
+				1134590019A810B7009D29AB /* ExplosionAnnotation.m in Sources */,
 				113458E919A7D713009D29AB /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
