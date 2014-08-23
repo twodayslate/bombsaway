@@ -107,6 +107,7 @@
     //[_mapView addOverlay:overlay];
     [_mapView addAnnotation:point1];
     [self addAnimatedOverlayToAnnotation:point1];
+    [self shakeMap];
     [self playExplosion];
     
     
@@ -129,6 +130,14 @@
         _audioPlayer.numberOfLoops = 0;
         [_audioPlayer play];
     }
+}
+
+-(void)shakeMap {
+    CLLocationCoordinate2D start = _mapView.centerCoordinate;
+    CLLocationCoordinate2D new = start;
+    new.latitude = new.latitude + 1;
+    [_mapView setCenterCoordinate:new animated:NO];
+    [_mapView setCenterCoordinate:start animated:YES];
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {

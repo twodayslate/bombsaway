@@ -29,6 +29,7 @@
 		1134590019A810B7009D29AB /* ExplosionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458FF19A810B7009D29AB /* ExplosionAnnotation.m */; };
 		1134590319A811DC009D29AB /* WorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590219A811DC009D29AB /* WorldMap.m */; };
 		1134590719A81323009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590619A81323009D29AB /* ViewController.m */; };
+		1134590919A8298E009D29AB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1134590819A8298E009D29AB /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		1134590219A811DC009D29AB /* WorldMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldMap.m; sourceTree = "<group>"; };
 		1134590519A81323009D29AB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1134590619A81323009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1134590819A8298E009D29AB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				113458AA19A7AC2B009D29AB /* CoreGraphics.framework in Frameworks */,
 				113458AC19A7AC2B009D29AB /* UIKit.framework in Frameworks */,
 				113458A819A7AC2B009D29AB /* Foundation.framework in Frameworks */,
+				1134590919A8298E009D29AB /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +125,7 @@
 		113458A619A7AC2B009D29AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1134590819A8298E009D29AB /* GameKit.framework */,
 				113458E519A7AFF8009D29AB /* ImageIO.framework */,
 				113458A719A7AC2B009D29AB /* Foundation.framework */,
 				113458A919A7AC2B009D29AB /* CoreGraphics.framework */,
@@ -256,6 +260,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = PRNDL;
 				TargetAttributes = {
+					113458A319A7AC2B009D29AB = {
+						DevelopmentTeam = 3QFVVU34MZ;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					113458BE19A7AC2B009D29AB = {
 						TestTargetID = 113458A319A7AC2B009D29AB;
 					};
