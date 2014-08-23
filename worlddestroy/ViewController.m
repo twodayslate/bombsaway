@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 PRNDL. All rights reserved.
 //
 
-#define OVERLAYMETERS 1000000
-
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -21,7 +19,11 @@
 
 -(void)addAnimatedOverlayToAnnotation:(id<MKAnnotation>)annotation{
     //get a frame around the annotation
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, OVERLAYMETERS, OVERLAYMETERS);
+    NSString *type = annotation.title;
+    double zoomLevel = [annotation.subtitle doubleValue];
+    double size = zoomLevel * 0.01;
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
     CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
     //set up the animated overlay
     
@@ -69,11 +71,15 @@
     _mapView.rotateEnabled = YES;
     _mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:_mapView];
-    
 }
 
 -(IBAction)handleTap:(UITapGestureRecognizer *)recognizer {
     NSLog(@"tap handled");
+    
+    NSLog(@"zoom scale = %f",_mapView.bounds.size.width / _mapView.visibleMapRect.size.width);
+    NSLog(@"visible rect width = %f",_mapView.visibleMapRect.size.width);
+    NSLog(@"visible rect height = %f",_mapView.visibleMapRect.size.height);
+    NSLog(@"zoom level = %f",[_mapView zoomLevel]);
     
     CGPoint point = [recognizer locationInView:_mapView];
     
@@ -82,6 +88,12 @@
     MKPointAnnotation *point1 = [[MKPointAnnotation alloc] init];
     
     point1.coordinate = tapPoint;
+    point1.title = @"default,0";
+    if(_mapView.visibleMapRect.size.width > _mapView.visibleMapRect.size.height)
+        point1.subtitle = [NSString stringWithFormat:@"%f",_mapView.visibleMapRect.size.width];
+    else
+        point1.subtitle = [NSString stringWithFormat:@"%f",_mapView.visibleMapRect.size.height];
+        
     
     //MKCircle *overlay = [MKCircle circleWithCenterCoordinate:tapPoint radius:1000];
     //[_mapView addOverlay:overlay];
