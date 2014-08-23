@@ -46,6 +46,11 @@
 		11A9576D19A867E200DA162C /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A9576C19A867E200DA162C /* TimerView.m */; };
 		11A9576F19A8FE4C00DA162C /* only-one.gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9576E19A8FE4C00DA162C /* only-one.gif */; };
 		11A9577119A902E100DA162C /* crater_mine.gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9577019A902E100DA162C /* crater_mine.gif */; };
+		11A9577319A93C6600DA162C /* explosion-no-repeat (1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9577219A93C6600DA162C /* explosion-no-repeat (1).gif */; };
+		11A9577519A93CDF00DA162C /* explosion (2).gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9577419A93CDF00DA162C /* explosion (2).gif */; };
+		11A9577919A93F4700DA162C /* crater_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9577819A93F4700DA162C /* crater_2.gif */; };
+		11A9577B19A9473600DA162C /* explosion (3).gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9577A19A9473600DA162C /* explosion (3).gif */; };
+		11A9577D19A949F900DA162C /* explosion (4).gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9577C19A949F900DA162C /* explosion (4).gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +113,11 @@
 		11A9576C19A867E200DA162C /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
 		11A9576E19A8FE4C00DA162C /* only-one.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "only-one.gif"; sourceTree = "<group>"; };
 		11A9577019A902E100DA162C /* crater_mine.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = crater_mine.gif; sourceTree = "<group>"; };
+		11A9577219A93C6600DA162C /* explosion-no-repeat (1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "explosion-no-repeat (1).gif"; sourceTree = "<group>"; };
+		11A9577419A93CDF00DA162C /* explosion (2).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "explosion (2).gif"; sourceTree = "<group>"; };
+		11A9577819A93F4700DA162C /* crater_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = crater_2.gif; sourceTree = "<group>"; };
+		11A9577A19A9473600DA162C /* explosion (3).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "explosion (3).gif"; sourceTree = "<group>"; };
+		11A9577C19A949F900DA162C /* explosion (4).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "explosion (4).gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +232,11 @@
 		113458FB19A80F82009D29AB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				11A9577C19A949F900DA162C /* explosion (4).gif */,
+				11A9577A19A9473600DA162C /* explosion (3).gif */,
+				11A9577819A93F4700DA162C /* crater_2.gif */,
+				11A9577419A93CDF00DA162C /* explosion (2).gif */,
+				11A9577219A93C6600DA162C /* explosion-no-repeat (1).gif */,
 				11A9577019A902E100DA162C /* crater_mine.gif */,
 				11A9576E19A8FE4C00DA162C /* only-one.gif */,
 				11A9576119A85AB500DA162C /* explosion (1).gif */,
@@ -354,14 +369,19 @@
 				11A9574A19A85A5200DA162C /* 160x120.gif in Resources */,
 				11A9575819A85A9B00DA162C /* 11301.png in Resources */,
 				11A9575B19A85A9B00DA162C /* crater_parkmayn.png in Resources */,
+				11A9577B19A9473600DA162C /* explosion (3).gif in Resources */,
 				11A9576819A85AB500DA162C /* cratere.gif in Resources */,
 				11A9575F19A85A9B00DA162C /* FWqc3Kk.gif in Resources */,
+				11A9577D19A949F900DA162C /* explosion (4).gif in Resources */,
+				11A9577319A93C6600DA162C /* explosion-no-repeat (1).gif in Resources */,
 				11A9575C19A85A9B00DA162C /* crater.bmp in Resources */,
 				11A9576519A85AB500DA162C /* explosion (1).gif in Resources */,
 				11A9577119A902E100DA162C /* crater_mine.gif in Resources */,
+				11A9577519A93CDF00DA162C /* explosion (2).gif in Resources */,
 				11A9576719A85AB500DA162C /* sheet_6x5.png in Resources */,
 				11A9575E19A85A9B00DA162C /* exp2_alpha_1.png in Resources */,
 				11A9575A19A85A9B00DA162C /* boom3_0.png in Resources */,
+				11A9577919A93F4700DA162C /* crater_2.gif in Resources */,
 				113458BA19A7AC2B009D29AB /* Images.xcassets in Resources */,
 				11A9576019A85A9B00DA162C /* splosion2.png in Resources */,
 				11A9576A19A85AE700DA162C /* crater.gif in Resources */,

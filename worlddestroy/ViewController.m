@@ -25,7 +25,7 @@ static BOOL shake = NO;
 //    type = [list objectAtIndex:0];
 //    int count = [[list objectAtIndex:1] integerValue];
     double zoomLevel = [annotation.subtitle doubleValue];
-    double size = zoomLevel * 0.05;
+    double size = zoomLevel * 0.03;
     
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
 
@@ -35,7 +35,7 @@ static BOOL shake = NO;
     CGContextRef c = UIGraphicsGetCurrentContext();
     CGContextSetInterpolationQuality(c, kCGInterpolationNone);
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"only-one" withExtension:@"gif"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"explosion (4)" withExtension:@"gif"];
     UIImage *image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
     //self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
     //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
@@ -56,7 +56,7 @@ static BOOL shake = NO;
     NSMutableDictionary *cb = [[NSMutableDictionary alloc] init];
     [cb setObject:annotation forKey:@"annotation"];
     [cb setObject:imageView forKey:@"imageView"];
-    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(doneExploding:) userInfo:cb repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1.05 target:self selector:@selector(doneExploding:) userInfo:cb repeats:NO];
     [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.1];
     [_mapView addSubview:imageView];
 }
@@ -79,7 +79,7 @@ static BOOL shake = NO;
         //    type = [list objectAtIndex:0];
         //    int count = [[list objectAtIndex:1] integerValue];
         double zoomLevel = [annotation.subtitle doubleValue];
-        double size = zoomLevel * 0.05;
+        double size = zoomLevel * 0.03;
         
         MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
         CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
@@ -87,7 +87,7 @@ static BOOL shake = NO;
         CGContextRef c = UIGraphicsGetCurrentContext();
         CGContextSetInterpolationQuality(c, kCGInterpolationNone);
         
-        NSURL *url = [[NSBundle mainBundle] URLForResource:@"crater_mine" withExtension:@"gif"];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"crater" withExtension:@"gif"];
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
         imageView.image = image;
