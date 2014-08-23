@@ -14,3 +14,4 @@ Todo
 * Added hamburger menu
 	Quick jump to popular locations
 * Add bomb icon with infinty sign (ammo ammount)
+* Add shake on tap
