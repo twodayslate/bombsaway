@@ -25,17 +25,22 @@ static BOOL shake = NO;
 //    type = [list objectAtIndex:0];
 //    int count = [[list objectAtIndex:1] integerValue];
     double zoomLevel = [annotation.subtitle doubleValue];
-    double size = zoomLevel * 0.01;
+    double size = zoomLevel * 0.05;
     
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
+
     CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
     //set up the animated overlay
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"explosion (1)" withExtension:@"gif"];
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    CGContextSetInterpolationQuality(c, kCGInterpolationNone);
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"only-one" withExtension:@"gif"];
     UIImage *image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
     //self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
     //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
+    imageView.layer.magnificationFilter = kCAFilterNearest;
     imageView.image = image;
     //imageView.center = imageView.frame.origin;
     //[self addSubview:imageView];
@@ -51,7 +56,7 @@ static BOOL shake = NO;
     NSMutableDictionary *cb = [[NSMutableDictionary alloc] init];
     [cb setObject:annotation forKey:@"annotation"];
     [cb setObject:imageView forKey:@"imageView"];
-    [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(doneExploding:) userInfo:cb repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(doneExploding:) userInfo:cb repeats:NO];
     [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.1];
     [_mapView addSubview:imageView];
 }
@@ -74,17 +79,19 @@ static BOOL shake = NO;
         //    type = [list objectAtIndex:0];
         //    int count = [[list objectAtIndex:1] integerValue];
         double zoomLevel = [annotation.subtitle doubleValue];
-        double size = zoomLevel * 0.01;
+        double size = zoomLevel * 0.05;
         
         MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
         CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
         //set up the animated overlay
+        CGContextRef c = UIGraphicsGetCurrentContext();
+        CGContextSetInterpolationQuality(c, kCGInterpolationNone);
         
-        NSURL *url = [[NSBundle mainBundle] URLForResource:@"crater" withExtension:@"gif"];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"crater_mine" withExtension:@"gif"];
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
         imageView.image = image;
-        
+        imageView.layer.magnificationFilter = kCAFilterNearest;
         //add to the map and start the animation
         if(!_craters) _craters = [[NSMutableArray alloc] init];
         [_craters addObject:imageView];
