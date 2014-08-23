@@ -15,7 +15,6 @@
 @implementation ViewController
 
 static BOOL shake = NO;
-static BOOL canBomb = NO;
 
 -(void)addAnimatedOverlayToAnnotation:(id<MKAnnotation>)annotation{
     
@@ -53,6 +52,7 @@ static BOOL canBomb = NO;
     [cb setObject:annotation forKey:@"annotation"];
     [cb setObject:imageView forKey:@"imageView"];
     [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(doneExploding:) userInfo:cb repeats:NO];
+    [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.1];
     [_mapView addSubview:imageView];
 }
 
@@ -62,10 +62,6 @@ static BOOL canBomb = NO;
     [self addCraterOverlayToAnnotation:[arg1 objectForKey:@"annotation"]];
     [[arg1 objectForKey:@"imageView"] removeFromSuperview];
     
-}
-
--(void)setCanBomb {
-    canBomb = YES;
 }
 
 -(void)addCraterOverlayToAnnotation:(id<MKAnnotation>)annotation {
@@ -123,17 +119,35 @@ static BOOL canBomb = NO;
     [super viewDidLoad];
     
     _mapView = [[WorldMap alloc] initWithFrame:self.view.frame];
+    _mapView.delegate = self;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [_mapView addGestureRecognizer:tapGesture];
-    _mapView.delegate = self;
-    _mapView.mapType = MKMapTypeSatellite;
-    _mapView.scrollEnabled = YES;
-    _mapView.showsUserLocation = NO;
-    _mapView.rotateEnabled = YES;
-    _mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
     [self.view addSubview:_mapView];
-    canBomb = YES;
+    
+    
+    _timerView = [[TimerView alloc] initWithFrame:CGRectMake(0,_mapView.frame.size.height-10,_mapView.frame.size.width,10)];
+    [_timerView setColor:[UIColor colorWithRed:0/256.0 green:256/256.0 blue:0/256.0 alpha:0.3]];
+    [self.view addSubview:_timerView];
+    [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.01];
+
     if(!_stillExploding) _stillExploding = [[NSMutableArray alloc] init];
+}
+
+- (void)onTimer {
+    
+    [UIView
+     animateWithDuration:0.01
+     animations:^{
+         _timerView.frame = CGRectMake(_timerView.frame.origin.x, _timerView.frame.origin.y,_timerView.frame.size.width + (self.view.frame.size.width/10),_timerView.frame.size.height);
+     }];
+    
+    if(_timerView.frame.size.width < _mapView.frame.size.width){
+        [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.1];
+    } else {
+        [_timerView setColor:[UIColor colorWithRed:0/256.0 green:256/256.0 blue:0/256.0 alpha:0.3]];
+        [_timerView setNeedsDisplay];
+    }
 }
 
 -(IBAction)handleTap:(UITapGestureRecognizer *)recognizer {
@@ -145,7 +159,7 @@ static BOOL canBomb = NO;
 //    NSLog(@"zoom level = %f",[_mapView zoomLevel]);
     
     
-    if(canBomb) {
+    if(_timerView.frame.size.width >= _mapView.frame.size.width) {
         CGPoint point = [recognizer locationInView:_mapView];
         
         CLLocationCoordinate2D tapPoint = [_mapView convertPoint:point toCoordinateFromView:self.view];
@@ -174,10 +188,17 @@ static BOOL canBomb = NO;
         _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
         _audioPlayer.numberOfLoops = 0;
         [_audioPlayer play];
-        canBomb = NO;
-        [self performSelector:@selector(setCanBomb) withObject:nil afterDelay:1.09];
+        
+        [self resetTimer];
     }
     
+}
+
+-(void)resetTimer {
+    _timerView.frame = CGRectMake(_timerView.frame.origin.x, _timerView.frame.origin.y,1,_timerView.frame.size.height);
+    UIColor *color = [UIColor colorWithRed:256/256.0 green:0/256.0 blue:0/256.0 alpha:0.3];
+    [_timerView setColor:color];
+    [_timerView setNeedsDisplay];
 }
 
 -(void)playExplosion:(id<MKAnnotation>)annotation {
@@ -252,6 +273,23 @@ static BOOL canBomb = NO;
     [self removeCraters];
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     [self readdCraters];
+    
+    [UIView
+     animateWithDuration:0.01
+     animations:^{
+         _timerView.frame = CGRectMake(0,_mapView.frame.size.height-_timerView.frame.size.height,_timerView.frame.size.width,_timerView.frame.size.height);
+     }];
+    
+    if([_timerView.color isEqual:[UIColor colorWithRed:0/256.0 green:256/256.0 blue:0/256.0 alpha:0.3]]) {
+        [UIView
+         animateWithDuration:0.01
+         animations:^{
+             _timerView.frame = CGRectMake(0,_mapView.frame.size.height-_timerView.frame.size.height,_mapView.frame.size.width,_timerView.frame.size.height);
+         }];
+    }
+    
+    //NSLog(@"new frame = (%f,%f)",_timerView.frame.origin.x,_timerView.frame.origin.y);
+    
 }
 
 - (void)didReceiveMemoryWarning

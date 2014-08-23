@@ -43,6 +43,7 @@
 		11A9576719A85AB500DA162C /* sheet_6x5.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A9576319A85AB500DA162C /* sheet_6x5.png */; };
 		11A9576819A85AB500DA162C /* cratere.gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9576419A85AB500DA162C /* cratere.gif */; };
 		11A9576A19A85AE700DA162C /* crater.gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9576919A85AE700DA162C /* crater.gif */; };
+		11A9576D19A867E200DA162C /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A9576C19A867E200DA162C /* TimerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		11A9576319A85AB500DA162C /* sheet_6x5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheet_6x5.png; sourceTree = "<group>"; };
 		11A9576419A85AB500DA162C /* cratere.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cratere.gif; sourceTree = "<group>"; };
 		11A9576919A85AE700DA162C /* crater.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = crater.gif; sourceTree = "<group>"; };
+		11A9576B19A8679200DA162C /* TimerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
+		11A9576C19A867E200DA162C /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				113458B919A7AC2B009D29AB /* Images.xcassets */,
 				113458AE19A7AC2B009D29AB /* Supporting Files */,
 				113458FE19A8102E009D29AB /* ExplosionAnnotation.h */,
+				11A9576B19A8679200DA162C /* TimerView.h */,
+				11A9576C19A867E200DA162C /* TimerView.m */,
 			);
 			path = worlddestroy;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 			files = (
 				1134590719A81323009D29AB /* ViewController.m in Sources */,
 				1134590319A811DC009D29AB /* WorldMap.m in Sources */,
+				11A9576D19A867E200DA162C /* TimerView.m in Sources */,
 				113458DF19A7AC54009D29AB /* AnimatedGIFImageSerialization.m in Sources */,
 				113458E119A7AC54009D29AB /* UIImage+animatedGIF.m in Sources */,
 				113458B819A7AC2B009D29AB /* AppDelegate.m in Sources */,

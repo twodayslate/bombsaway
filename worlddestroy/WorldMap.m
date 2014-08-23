@@ -1,6 +1,16 @@
 #import "WorldMap.h"
 
 @implementation WorldMap
+-(id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    self.mapType = MKMapTypeSatellite;
+    self.scrollEnabled = YES;
+    self.showsUserLocation = NO;
+    self.rotateEnabled = YES;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    return self;
+}
+
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }

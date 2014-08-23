@@ -9,7 +9,6 @@ Todo
 
 * Bug where bomb timer isn't perfect
 * Bug where explosion to crater flashes
-* Added visible counter
 * Add score and gamecenter support 
 	Score = total number of bombs exploded
 * Added hamburger menu
