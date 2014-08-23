@@ -7,10 +7,14 @@ A simple iOS game, tap to destroy!
 Todo
 ------------
 
-* Bug where bomb timer isn't perfect
-* Bug where explosion to crater flashes
 * Add score and gamecenter support 
 	Score = total number of bombs exploded
 * Added hamburger menu
 	Quick jump to popular locations
 * Add bomb icon with infinty sign (ammo ammount)
+
+Bugs
+------------
+
+* The first bomb's timer selector doesn't fire at the correct time            
+* After explosion, switching to crater image causes a flash of nothingnes
