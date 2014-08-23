@@ -7,8 +7,8 @@ A simple iOS game, tap to destroy!
 Todo
 ------------
 
-* Find/create/purchase a sprite that does the explosion and then makes a crater
-* Added timer (one-bomb per second or something)
+* Bug where first bomb doesn't go off
+* Added visible counter
 * Add score and gamecenter support 
 	Score = total number of bombs exploded
 * Added hamburger menu

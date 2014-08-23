@@ -22,4 +22,6 @@
 @property (strong, nonatomic) WorldMap *mapView;
 @property (weak, nonatomic) IBOutlet id explosion;
 @property (strong, nonatomic) IBOutlet NSMutableArray *craters;
+@property (strong, nonatomic) IBOutlet NSMutableArray *stillExploding;
+@property (strong, nonatomic) IBOutlet NSMutableArray *stillExplodingViews;
 @end

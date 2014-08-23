@@ -30,6 +30,10 @@
 		1134590319A811DC009D29AB /* WorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590219A811DC009D29AB /* WorldMap.m */; };
 		1134590719A81323009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590619A81323009D29AB /* ViewController.m */; };
 		1134590919A8298E009D29AB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1134590819A8298E009D29AB /* GameKit.framework */; };
+		1134590B19A835F5009D29AB /* cratere.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1134590A19A835F5009D29AB /* cratere.gif */; };
+		11A9574419A84DAD00DA162C /* explosion.gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9574319A84DAD00DA162C /* explosion.gif */; };
+		11A9574619A84DFE00DA162C /* crater.gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9574519A84DFE00DA162C /* crater.gif */; };
+		11A9574819A84FF500DA162C /* explosion (1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9574719A84FF500DA162C /* explosion (1).gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		1134590519A81323009D29AB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1134590619A81323009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1134590819A8298E009D29AB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		1134590A19A835F5009D29AB /* cratere.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = cratere.gif; path = ../../../Downloads/cratere.gif; sourceTree = "<group>"; };
+		11A9574319A84DAD00DA162C /* explosion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = explosion.gif; path = ../../../Downloads/explosion.gif; sourceTree = "<group>"; };
+		11A9574519A84DFE00DA162C /* crater.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = crater.gif; path = ../../../Desktop/crater.gif; sourceTree = "<group>"; };
+		11A9574719A84FF500DA162C /* explosion (1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "explosion (1).gif"; path = "../../../Downloads/explosion (1).gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +195,10 @@
 		113458FB19A80F82009D29AB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				11A9574719A84FF500DA162C /* explosion (1).gif */,
+				11A9574519A84DFE00DA162C /* crater.gif */,
+				11A9574319A84DAD00DA162C /* explosion.gif */,
+				1134590A19A835F5009D29AB /* cratere.gif */,
 				113458D919A7AC54009D29AB /* 160x120.gif */,
 				113458F919A7EF54009D29AB /* zac_crater_01.png */,
 				113458EA19A7D748009D29AB /* FWqc3Kk.gif */,
@@ -298,9 +310,13 @@
 			files = (
 				113458B219A7AC2B009D29AB /* InfoPlist.strings in Resources */,
 				113458E019A7AC54009D29AB /* 160x120.gif in Resources */,
+				11A9574419A84DAD00DA162C /* explosion.gif in Resources */,
 				113458FA19A7EF54009D29AB /* zac_crater_01.png in Resources */,
+				11A9574619A84DFE00DA162C /* crater.gif in Resources */,
+				1134590B19A835F5009D29AB /* cratere.gif in Resources */,
 				113458EB19A7D748009D29AB /* FWqc3Kk.gif in Resources */,
 				113458DE19A7AC54009D29AB /* atari_boom.mp3 in Resources */,
+				11A9574819A84FF500DA162C /* explosion (1).gif in Resources */,
 				113458BA19A7AC2B009D29AB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +541,7 @@
 				113458D219A7AC2B009D29AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		113458D319A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroyTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +550,7 @@
 				113458D519A7AC2B009D29AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

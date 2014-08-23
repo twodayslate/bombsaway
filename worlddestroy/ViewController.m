@@ -13,13 +13,16 @@
 @end
 
 @implementation ViewController
-//static NSMutableArray *craters = nil;
 
-
+static BOOL shake = NO;
+static BOOL canBomb = YES;
 
 -(void)addAnimatedOverlayToAnnotation:(id<MKAnnotation>)annotation{
     //get a frame around the annotation
-    NSString *type = annotation.title;
+    //NSString *type = annotation.title;
+//    NSArray *list = [type componentsSeparatedByString:@","];
+//    type = [list objectAtIndex:0];
+//    int count = [[list objectAtIndex:1] integerValue];
     double zoomLevel = [annotation.subtitle doubleValue];
     double size = zoomLevel * 0.01;
     
@@ -27,7 +30,7 @@
     CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
     //set up the animated overlay
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"FWqc3Kk" withExtension:@"gif"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"explosion (1)" withExtension:@"gif"];
     UIImage *image = [UIImage animatedImageWithAnimatedGIFData:[NSData dataWithContentsOfURL:url]];
     //self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
     //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
@@ -40,11 +43,56 @@
     //add to the map and start the animation
     if(!_craters) _craters = [[NSMutableArray alloc] init];
     [_craters addObject:imageView];
+    if(!_stillExploding) _stillExploding = [[NSMutableArray alloc] init];
+    [_stillExploding addObject:annotation];
+    [self performSelector:@selector(doneExploding:) withObject:@[annotation,imageView] afterDelay:1.09];
     [_mapView addSubview:imageView];
 }
 
+-(void)doneExploding:(id)arg1 {
+    [[arg1 objectAtIndex:1] removeFromSuperview];
+    [_stillExploding removeObject:[arg1 objectAtIndex:0]];
+    [self addCraterOverlayToAnnotation:[arg1 objectAtIndex:0]];
+}
+
+-(void)setCanBomb {
+    canBomb = YES;
+}
+
+-(void)addCraterOverlayToAnnotation:(id<MKAnnotation>)annotation {
+    if([_stillExploding containsObject:annotation]) {
+        [self addAnimatedOverlayToAnnotation:annotation];
+    } else {
+        //get a frame around the annotation
+        //NSString *type = annotation.title;
+        //    NSArray *list = [type componentsSeparatedByString:@","];
+        //    type = [list objectAtIndex:0];
+        //    int count = [[list objectAtIndex:1] integerValue];
+        double zoomLevel = [annotation.subtitle doubleValue];
+        double size = zoomLevel * 0.01;
+        
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
+        CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
+        //set up the animated overlay
+        
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"crater" withExtension:@"gif"];
+        //[UIImage imageWithData:[NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
+        //self.urlImageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
+        //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
+        imageView.image = image;
+        //imageView.center = imageView.frame.origin;
+        //[self addSubview:imageView];
+        
+        //add to the map and start the animation
+        if(!_craters) _craters = [[NSMutableArray alloc] init];
+        [_craters addObject:imageView];
+        [_mapView addSubview:imageView];
+    }
+}
+
 -(void) mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated{
-    //removes the animated overlay
     [self removeCraters];
 }
 
@@ -57,12 +105,12 @@
 
 -(void)readdCraters {
     for(id<MKAnnotation> n in _mapView.annotations){
-        [self addAnimatedOverlayToAnnotation:n];
+        [self addCraterOverlayToAnnotation:n];
     }
 }
 
 -(void) mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-    NSLog(@"inside here");
+    [self removeCraters];
     [self readdCraters];
 }
 
@@ -82,44 +130,49 @@
 }
 
 -(IBAction)handleTap:(UITapGestureRecognizer *)recognizer {
-    NSLog(@"tap handled");
+//    NSLog(@"tap handled");
+//    
+//    NSLog(@"zoom scale = %f",_mapView.bounds.size.width / _mapView.visibleMapRect.size.width);
+//    NSLog(@"visible rect width = %f",_mapView.visibleMapRect.size.width);
+//    NSLog(@"visible rect height = %f",_mapView.visibleMapRect.size.height);
+//    NSLog(@"zoom level = %f",[_mapView zoomLevel]);
     
-    NSLog(@"zoom scale = %f",_mapView.bounds.size.width / _mapView.visibleMapRect.size.width);
-    NSLog(@"visible rect width = %f",_mapView.visibleMapRect.size.width);
-    NSLog(@"visible rect height = %f",_mapView.visibleMapRect.size.height);
-    NSLog(@"zoom level = %f",[_mapView zoomLevel]);
-    
-    CGPoint point = [recognizer locationInView:_mapView];
-    
-    CLLocationCoordinate2D tapPoint = [_mapView convertPoint:point toCoordinateFromView:self.view];
-    
-    MKPointAnnotation *point1 = [[MKPointAnnotation alloc] init];
-    
-    point1.coordinate = tapPoint;
-    point1.title = @"default,0";
-    if(_mapView.visibleMapRect.size.width > _mapView.visibleMapRect.size.height)
-        point1.subtitle = [NSString stringWithFormat:@"%f",_mapView.visibleMapRect.size.width];
-    else
-        point1.subtitle = [NSString stringWithFormat:@"%f",_mapView.visibleMapRect.size.height];
+    if(canBomb) {
+        CGPoint point = [recognizer locationInView:_mapView];
         
+        CLLocationCoordinate2D tapPoint = [_mapView convertPoint:point toCoordinateFromView:self.view];
+        
+        MKPointAnnotation *point1 = [[MKPointAnnotation alloc] init];
+        
+        point1.coordinate = tapPoint;
+        point1.title = @"default";
+        if(_mapView.visibleMapRect.size.width > _mapView.visibleMapRect.size.height)
+            point1.subtitle = [NSString stringWithFormat:@"%f",_mapView.visibleMapRect.size.width];
+        else
+            point1.subtitle = [NSString stringWithFormat:@"%f",_mapView.visibleMapRect.size.height];
+        
+        
+        //MKCircle *overlay = [MKCircle circleWithCenterCoordinate:tapPoint radius:1000];
+        //[_mapView addOverlay:overlay];
+        [_mapView addAnnotation:point1];
+        //[self shakeMap];
+        [self addAnimatedOverlayToAnnotation:point1];
+        [self playExplosion:point1];
+        
+        
+        NSString *soundFilePath = [NSString stringWithFormat:@"%@/atari_boom.mp3",
+                                   [[NSBundle mainBundle] resourcePath]];
+        NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+        _audioPlayer.numberOfLoops = 0;
+        [_audioPlayer play];
+        canBomb = NO;
+        [self performSelector:@selector(setCanBomb) withObject:nil afterDelay:1.09];
+    }
     
-    //MKCircle *overlay = [MKCircle circleWithCenterCoordinate:tapPoint radius:1000];
-    //[_mapView addOverlay:overlay];
-    [_mapView addAnnotation:point1];
-    [self addAnimatedOverlayToAnnotation:point1];
-    [self shakeMap];
-    [self playExplosion];
-    
-    
-    NSString *soundFilePath = [NSString stringWithFormat:@"%@/atari_boom.mp3",
-                               [[NSBundle mainBundle] resourcePath]];
-    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-    _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
-    _audioPlayer.numberOfLoops = 0;
-    [_audioPlayer play];
 }
 
--(void)playExplosion {
+-(void)playExplosion:(id<MKAnnotation>)annotation {
     if(_audioPlayer) {
         [_audioPlayer play];
     } else {
@@ -133,11 +186,17 @@
 }
 
 -(void)shakeMap {
+    shake = YES;
     CLLocationCoordinate2D start = _mapView.centerCoordinate;
     CLLocationCoordinate2D new = start;
     new.latitude = new.latitude + 1;
     [_mapView setCenterCoordinate:new animated:NO];
     [_mapView setCenterCoordinate:start animated:YES];
+    [self performSelector:@selector(setShake) withObject:nil afterDelay:0.2];
+}
+
+-(void)setShake {
+    shake = NO;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
