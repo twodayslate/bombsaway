@@ -45,17 +45,25 @@
 
 -(void) mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated{
     //removes the animated overlay
+    [self removeCraters];
+}
+
+-(void)removeCraters {
     for(UIImageView *view in _craters) {
         [view removeFromSuperview];
     }
     _craters = [[NSMutableArray alloc] init];
 }
 
--(void) mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
-    NSLog(@"inside here");
+-(void)readdCraters {
     for(id<MKAnnotation> n in _mapView.annotations){
         [self addAnimatedOverlayToAnnotation:n];
     }
+}
+
+-(void) mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated{
+    NSLog(@"inside here");
+    [self readdCraters];
 }
 
 - (void)viewDidLoad {
@@ -155,6 +163,18 @@
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) interfaceOrientation{
     return YES;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    [self removeCraters];
+}
+
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self removeCraters];
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [self readdCraters];
 }
 
 - (void)didReceiveMemoryWarning
