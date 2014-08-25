@@ -27,7 +27,7 @@
     //
     REFrostedViewController *frostedViewController = [[REFrostedViewController alloc] initWithContentViewController:mainController menuViewController:menuController];
     frostedViewController.direction = REFrostedViewControllerDirectionLeft;
-    frostedViewController.liveBlurBackgroundStyle = REFrostedViewControllerLiveBackgroundStyleLight;
+    frostedViewController.liveBlurBackgroundStyle = REFrostedViewControllerLiveBackgroundStyleDark;
     frostedViewController.liveBlur = YES;
     frostedViewController.delegate = self;
     

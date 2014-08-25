@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -145,12 +146,27 @@ static BOOL shake = NO;
     
     [self.view addSubview:_mapView];
     
+    UIImage *image = [UIImage imageNamed:@"menu-128.png"];
+    UIButton *menu = [[UIButton alloc] initWithFrame:CGRectMake(5, 5, 25, 25)];
+    [menu setImage:image forState:UIControlStateNormal];
+    [menu addTarget:self
+               action:@selector(showMenu)forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:menu];
+    
+    
+    
     
     _timerView = [[TimerView alloc] initWithFrame:CGRectMake(0,_mapView.frame.size.height-10,_mapView.frame.size.width,10)];
     [_timerView setColor:[UIColor colorWithRed:0/256.0 green:256/256.0 blue:0/256.0 alpha:0.3]];
     [self.view addSubview:_timerView];
     [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.01];
 
+    image = [UIImage imageNamed:@"small_bomb_16.gif"];
+    UIButton *ammo = [[UIButton alloc] initWithFrame:CGRectMake(_mapView.frame.size.width-40, _mapView.frame.size.height-40, 40, 40)];
+    [ammo setImage:image forState:UIControlStateNormal];
+    ammo.alpha = 0.8;
+    [self.view addSubview:ammo];
+    
     if(!_stillExploding) _stillExploding = [[NSMutableArray alloc] init];
 }
 
@@ -316,6 +332,19 @@ static BOOL shake = NO;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)showMenu
+{
+    // Dismiss keyboard (optional)
+    //
+    [self.view endEditing:YES];
+    [self.frostedViewController.view endEditing:YES];
+    
+    // Present the view controller
+    //
+    [self.frostedViewController presentMenuViewController];
 }
 
 @end

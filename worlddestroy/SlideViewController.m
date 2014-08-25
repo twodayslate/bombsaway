@@ -22,6 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.opaque = NO;
+    self.tableView.backgroundColor = [UIColor clearColor];
     // Do any additional setup after loading the view.
 }
 

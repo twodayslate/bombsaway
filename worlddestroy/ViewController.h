@@ -17,6 +17,7 @@
 #import "WorldMap.h"
 #import "TimerView.h"
 #import "AppDelegate.h"
+#import "UIViewController+REFrostedViewController.h"
 
 @interface ViewController : UIViewController <MKMapViewDelegate, UIGestureRecognizerDelegate> {
     AVAudioPlayer *_audioPlayer;
