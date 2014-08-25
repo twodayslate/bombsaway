@@ -16,5 +16,4 @@ Todo
 Bugs
 ------------
 
-* The first bomb's timer selector doesn't fire at the correct time            
-* Position of explosion/craters incorrect at poles
+* The first bomb's timer selector doesn't fire at the correct time

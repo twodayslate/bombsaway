@@ -28,7 +28,7 @@ static BOOL shake = NO;
     double size = zoomLevel*15000;
     
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
-
+    CGPoint point = [_mapView convertCoordinate:annotation.coordinate toPointToView:_mapView];
     CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
     
     region = MKCoordinateRegionMakeWithDistance([_mapView centerCoordinate], size, size);
@@ -44,6 +44,7 @@ static BOOL shake = NO;
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect2];
     imageView.layer.magnificationFilter = kCAFilterNearest; // for crisp edges
     imageView.image = image;
+    imageView.center = point;
 
     
 
@@ -86,7 +87,7 @@ static BOOL shake = NO;
         
         MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, size, size);
         CGRect rect = [_mapView  convertRegion:region toRectToView:_mapView];
-        
+        CGPoint point = [_mapView convertCoordinate:annotation.coordinate toPointToView:_mapView];
         region = MKCoordinateRegionMakeWithDistance([_mapView centerCoordinate], size, size);
         CGRect rect1= [_mapView  convertRegion:region toRectToView:_mapView];
         
@@ -99,7 +100,8 @@ static BOOL shake = NO;
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect2];
         //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        //imageView.center = CGPointMake(rect.origin.x, rect.origin.y);
+        imageView.center = CGPointMake(point.x,point.y);
+        
         
         imageView.image = image;
         imageView.layer.magnificationFilter = kCAFilterNearest;

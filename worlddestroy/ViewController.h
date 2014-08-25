@@ -16,12 +16,14 @@
 #import "ExplosionAnnotation.h"
 #import "WorldMap.h"
 #import "TimerView.h"
+#import "AppDelegate.h"
 
 @interface ViewController : UIViewController <MKMapViewDelegate, UIGestureRecognizerDelegate> {
     AVAudioPlayer *_audioPlayer;
 }
 @property (strong, nonatomic) WorldMap *mapView;
 @property (strong, nonatomic) TimerView *timerView;
+@property (strong, nonatomic) AppDelegate *delegate;
 @property (weak, nonatomic) IBOutlet id explosion;
 @property (strong, nonatomic) IBOutlet NSMutableArray *craters;
 @property (strong, nonatomic) IBOutlet NSMutableArray *stillExploding;
