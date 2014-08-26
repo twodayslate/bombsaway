@@ -20,7 +20,9 @@
 #import "UIViewController+REFrostedViewController.h"
 #import "SlideViewController.h"
 
-@interface ViewController : UIViewController <MKMapViewDelegate, UIGestureRecognizerDelegate> {
+@class TimerView;
+
+@interface WDController : UIViewController <MKMapViewDelegate, UIGestureRecognizerDelegate> {
     AVAudioPlayer *_audioPlayer;
 }
 @property (strong, nonatomic) WorldMap *mapView;
@@ -31,5 +33,4 @@
 @property (strong, nonatomic) IBOutlet NSMutableArray *stillExploding;
 @property (strong, nonatomic) IBOutlet NSMutableArray *stillExplodingViews;
 @property (strong, nonatomic) SlideViewController *menu;
-- (void)onTimer;
 @end

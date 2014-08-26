@@ -6,14 +6,9 @@
 //  Copyright (c) 2014 PRNDL. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WDController.h"
 
-
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
+@implementation WDController
 
 static BOOL shake = NO;
 
@@ -60,8 +55,6 @@ static BOOL shake = NO;
     [cb setObject:annotation forKey:@"annotation"];
     [cb setObject:imageView forKey:@"imageView"];
     [NSTimer scheduledTimerWithTimeInterval:1.05 target:self selector:@selector(doneExploding:) userInfo:cb repeats:NO];
-    
-    [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.1]; // reset timer;
     
     [_mapView addSubview:imageView];
 }
@@ -153,13 +146,9 @@ static BOOL shake = NO;
                action:@selector(showMenu)forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:menu];
     
-    
-    
-    
-    _timerView = [[TimerView alloc] initWithFrame:CGRectMake(0,_mapView.frame.size.height-10,_mapView.frame.size.width,10)];
-    [_timerView setColor:[TimerView greenColor]];
+    _timerView = [[TimerView alloc] initWithComparitor:self withDelay:0.1];
     [self.view addSubview:_timerView];
-    [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.01];
+    
 
     image = [UIImage imageNamed:@"small_bomb_16.gif"];
     UIButton *ammo = [[UIButton alloc] initWithFrame:CGRectMake(_mapView.frame.size.width-40, _mapView.frame.size.height-40, 40, 40)];
@@ -172,22 +161,6 @@ static BOOL shake = NO;
     if(!_stillExploding) _stillExploding = [[NSMutableArray alloc] init];
 }
 
-- (void)onTimer {
-    
-    [UIView
-     animateWithDuration:0.01
-     animations:^{
-         _timerView.frame = CGRectMake(_timerView.frame.origin.x, _timerView.frame.origin.y,_timerView.frame.size.width + (self.view.frame.size.width/10),_timerView.frame.size.height);
-     }];
-    
-    if(_timerView.frame.size.width < _mapView.frame.size.width){
-        [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.1];
-    } else {
-        [_timerView setColor:[TimerView greenColor]];
-        [_timerView setNeedsDisplay];
-    }
-}
-
 -(IBAction)handleTap:(UITapGestureRecognizer *)recognizer {
 //    NSLog(@"tap handled");
 //    
@@ -197,7 +170,7 @@ static BOOL shake = NO;
 //    NSLog(@"zoom level = %f",[_mapView zoomLevel]);
     
     
-    if(_timerView.frame.size.width >= _mapView.frame.size.width) {
+    if([_timerView isMax]) {
         CGPoint point = [recognizer locationInView:_mapView];
         
         CLLocationCoordinate2D tapPoint = [_mapView convertPoint:point toCoordinateFromView:self.view];
@@ -227,15 +200,9 @@ static BOOL shake = NO;
         _audioPlayer.numberOfLoops = 0;
         [_audioPlayer play];
         
-        [self resetTimer];
+        [_timerView reset];
     }
     
-}
-
--(void)resetTimer {
-    _timerView.frame = CGRectMake(_timerView.frame.origin.x, _timerView.frame.origin.y,1,_timerView.frame.size.height);
-    [_timerView setColor:[TimerView redColor]];
-    [_timerView setNeedsDisplay];
 }
 
 -(void)playExplosion:(id<MKAnnotation>)annotation {
@@ -311,19 +278,7 @@ static BOOL shake = NO;
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     [self readdCraters];
     
-    [UIView
-     animateWithDuration:0.01
-     animations:^{
-         _timerView.frame = CGRectMake(0,_mapView.frame.size.height-_timerView.frame.size.height,_timerView.frame.size.width,_timerView.frame.size.height);
-     }];
-    
-    if([_timerView.color isEqual:[TimerView greenColor]]) {
-        [UIView
-         animateWithDuration:0.01
-         animations:^{
-             _timerView.frame = CGRectMake(0,_mapView.frame.size.height-_timerView.frame.size.height,_mapView.frame.size.width,_timerView.frame.size.height);
-         }];
-    }
+    [_timerView rotate];
     
     //NSLog(@"new frame = (%f,%f)",_timerView.frame.origin.x,_timerView.frame.origin.y);
     

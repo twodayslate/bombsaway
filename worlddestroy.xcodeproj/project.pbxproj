@@ -23,7 +23,7 @@
 		113458E619A7AFF8009D29AB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458E519A7AFF8009D29AB /* ImageIO.framework */; };
 		1134590019A810B7009D29AB /* ExplosionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458FF19A810B7009D29AB /* ExplosionAnnotation.m */; };
 		1134590319A811DC009D29AB /* WorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590219A811DC009D29AB /* WorldMap.m */; };
-		1134590719A81323009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590619A81323009D29AB /* ViewController.m */; };
+		1134590719A81323009D29AB /* WDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590619A81323009D29AB /* WDController.m */; };
 		1134590919A8298E009D29AB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1134590819A8298E009D29AB /* GameKit.framework */; };
 		11A9574C19A85A8100DA162C /* atari_boom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11A9574B19A85A8100DA162C /* atari_boom.mp3 */; };
 		11A9575B19A85A9B00DA162C /* crater_parkmayn.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A9575119A85A9B00DA162C /* crater_parkmayn.png */; };
@@ -90,8 +90,8 @@
 		113458FF19A810B7009D29AB /* ExplosionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplosionAnnotation.m; sourceTree = "<group>"; };
 		1134590119A8114D009D29AB /* WorldMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorldMap.h; sourceTree = "<group>"; };
 		1134590219A811DC009D29AB /* WorldMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldMap.m; sourceTree = "<group>"; };
-		1134590519A81323009D29AB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1134590619A81323009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1134590519A81323009D29AB /* WDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDController.h; sourceTree = "<group>"; };
+		1134590619A81323009D29AB /* WDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDController.m; sourceTree = "<group>"; };
 		1134590819A8298E009D29AB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		11A9574B19A85A8100DA162C /* atari_boom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = atari_boom.mp3; sourceTree = "<group>"; };
 		11A9575119A85A9B00DA162C /* crater_parkmayn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crater_parkmayn.png; sourceTree = "<group>"; };
@@ -214,8 +214,8 @@
 				1134590219A811DC009D29AB /* WorldMap.m */,
 				11A9577E19AAC77900DA162C /* SlideViewController.h */,
 				11A9577F19AAC77900DA162C /* SlideViewController.m */,
-				1134590519A81323009D29AB /* ViewController.h */,
-				1134590619A81323009D29AB /* ViewController.m */,
+				1134590519A81323009D29AB /* WDController.h */,
+				1134590619A81323009D29AB /* WDController.m */,
 				1134590119A8114D009D29AB /* WorldMap.h */,
 				113458FF19A810B7009D29AB /* ExplosionAnnotation.m */,
 				113458B619A7AC2B009D29AB /* AppDelegate.h */,
@@ -464,7 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11A9579319AAEFD900DA162C /* UIViewController+REFrostedViewController.m in Sources */,
-				1134590719A81323009D29AB /* ViewController.m in Sources */,
+				1134590719A81323009D29AB /* WDController.m in Sources */,
 				11A9578E19AAEFD900DA162C /* RECommonFunctions.m in Sources */,
 				1134590319A811DC009D29AB /* WorldMap.m in Sources */,
 				11A9578F19AAEFD900DA162C /* REFrostedContainerViewController.m in Sources */,

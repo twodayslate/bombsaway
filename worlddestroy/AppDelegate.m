@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "WDController.h"
 #import "SlideViewController.h"
 
 @implementation AppDelegate
@@ -18,7 +18,7 @@
     // Create content and menu controllers
     //
     
-    ViewController *mainController = [[ViewController alloc] init];
+    WDController *mainController = [[WDController alloc] init];
     mainController.delegate = self;
     
     SlideViewController *menuController = [[SlideViewController alloc] initWithStyle:UITableViewStylePlain];
