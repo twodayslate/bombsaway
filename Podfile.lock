@@ -1,0 +1,22 @@
+PODS:
+  - ALAnimationView (0.1.0)
+  - AnimatedGif (0.1.1)
+  - AnimatedGIFImageSerialization (0.2.0)
+  - GPUImage (0.1.5)
+  - UIImage+animatedGif (0.1.0)
+
+DEPENDENCIES:
+  - ALAnimationView
+  - AnimatedGif
+  - AnimatedGIFImageSerialization
+  - GPUImage
+  - UIImage+animatedGif
+
+SPEC CHECKSUMS:
+  ALAnimationView: e94a8e07784bc95976d759d98c4876cfb12be5ae
+  AnimatedGif: 02960d34d11eb52a154fbf876ebc584a0fe26442
+  AnimatedGIFImageSerialization: ee2b8f04ec1143dd196cac160a7b119753891825
+  GPUImage: 5114a47f5fc33eb312f3731550a3cea379416d04
+  UIImage+animatedGif: dfdff756b010648ee461663c0120c5b2581fc809
+
+COCOAPODS: 0.33.1

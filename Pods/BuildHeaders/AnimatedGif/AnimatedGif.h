@@ -1,0 +1,1 @@
+../../AnimatedGif/Classes/AnimatedGif.h
