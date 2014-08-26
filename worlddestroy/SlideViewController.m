@@ -25,10 +25,12 @@
     [super viewDidLoad];
     
     self.tableView.opaque = NO;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:0.50f];
     
-    _countries = @[@"Beijing", @"London",
+    _cities = @[@"Beijing", @"London",
                    @"New York City", @"Moscow",
                    @"Tokyo", @"Chicago",
                    @"Hong Kong", @"Paris",
@@ -38,6 +40,21 @@
                       @[@35.6895, @139.6917], @[@41.8819, @87.6278],
                       @[@22.2670, @114.1880], @[@48.8567, @2.3508],
                       @[@38.8951, @77.0367] ]; // Thanks Google :)
+    
+    _ads = YES;
+    
+    _links = @[@"http://prndl.us/",@"http://twitter.com/twodayslate"];
+    _linkTitles = @[@"PRNDL.us",@"@twodayslate"];
+    
+    _sectionsArray = [[NSMutableArray alloc] init];;
+    
+    if(_ads) {
+        [_sectionsArray addObject:@"ads"];
+    }
+    
+    [_sectionsArray addObject:@"cities"];
+    [_sectionsArray addObject:@"about"];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -47,12 +64,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfSections {
-    return 1; 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [_sectionsArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_countries count];
+    NSString *type = [_sectionsArray objectAtIndex:section];
+
+    if([type isEqual:@"ads"]) {
+        return 2;
+    } else if([type isEqual:@"cities"]) {
+        return [_cities count];
+    } else if([type isEqual:@"about"]) {
+        return [_linkTitles count];
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -63,29 +89,73 @@
     if(!cell) {
         cell = [[UITableViewCell alloc] init];
     }
-    cell.textLabel.text = [_countries objectAtIndex:indexPath.row];
+    
+    NSString *type = [_sectionsArray objectAtIndex:indexPath.section];
+    
+    if([type isEqual:@"ads"]) {
+        if(indexPath.row == 0) {
+            ADBannerView *adView = [[ADBannerView alloc] initWithFrame:cell.frame];
+            [cell addSubview:adView];
+        } else {
+            cell.textLabel.text = @"Remove all ads - $0.99";
+        }
+    } else if([type isEqual:@"cities"]) {
+        cell.textLabel.text = [_cities objectAtIndex:indexPath.row];
+    } else if([type isEqual:@"about"]) {
+        cell.textLabel.text = [_linkTitles objectAtIndex:indexPath.row];
+    }
+    
+    
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"MAJOR CITIES";
+    NSString *type = [_sectionsArray objectAtIndex:section];
+    
+    if([type isEqual:@"ads"]) {
+        return @"ADVERTISEMENT";
+    } else if([type isEqual:@"cities"]) {
+        return @"MAJOR CITIES";
+    } else if([type isEqual:@"about"]) {
+        return @"ABOUT";
+    }
+    return @"";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *type = [_sectionsArray objectAtIndex:indexPath.section];
     
+    if([type isEqual:@"ads"]) {
+        if(indexPath.row == 1) {
+            // iAP here
+        }
+    } else if([type isEqual:@"cities"]) {
+        [self goToCity:indexPath.row];
+        [self.frostedViewController hideMenuViewController];
+    } else if([type isEqual:@"about"]) {
+        if(indexPath.row == 0) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://prndl.us"]];
+        } else { [self launchTwitter:@"twodayslate"]; }
+    }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+-(void)goToCity:(int)city {
     CLLocationCoordinate2D  point;
-    point.latitude = [[[_coordinates objectAtIndex:indexPath.row] objectAtIndex:0] doubleValue];
-    point.longitude = [[[_coordinates objectAtIndex:indexPath.row] objectAtIndex:1] doubleValue];
+    point.latitude = [[[_coordinates objectAtIndex:city] objectAtIndex:0] doubleValue];
+    point.longitude = [[[_coordinates objectAtIndex:city] objectAtIndex:1] doubleValue];
     
     NSLog(@"Going to: (%f, %f)",point.latitude,point.longitude);
     
-//    int zoomLevel = 5;
-//    MKCoordinateSpan span = MKCoordinateSpanMake(0, 360/pow(2, zoomLevel)*_mapView.frame.size.width/256);
-//    //MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(point, 250, 250);
-//    MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:MKCoordinateRegionMake(point, span)];
-//    [_mapView setRegion:adjustedRegion animated:YES];
+    //    int zoomLevel = 5;
+    //    MKCoordinateSpan span = MKCoordinateSpanMake(0, 360/pow(2, zoomLevel)*_mapView.frame.size.width/256);
+    //    //MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(point, 250, 250);
+    //    MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:MKCoordinateRegionMake(point, span)];
+    //    [_mapView setRegion:adjustedRegion animated:YES];
     
     // This sets a minimum distance but not a maximum
     MKCoordinateRegion region;
@@ -97,8 +167,28 @@
     [_mapView setRegion:region animated:TRUE];
     
     [_mapView setCenterCoordinate:point animated:YES];
+}
+
+- (void)launchTwitter:(NSString *)username {
+	if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetbot:"]]) {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tweetbot:///user_profile/twodayslate"]];
+	}
     
-    [self.frostedViewController hideMenuViewController];
+	else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitterrific:"]]) {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"twitterrific:///profile?screen_name=twodayslate"]];
+	}
+    
+	else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tweetings:"]]) {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tweetings:///user?screen_name=twodayslate"]];
+	}
+    
+	else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"twitter:"]]) {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"twitter://user?screen_name=twodayslate"]];
+	}
+    
+	else {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://mobile.twitter.com/twodayslate"]];
+	}
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
