@@ -19,13 +19,13 @@
 		113458C319A7AC2B009D29AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458AB19A7AC2B009D29AB /* UIKit.framework */; };
 		113458CB19A7AC2B009D29AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 113458C919A7AC2B009D29AB /* InfoPlist.strings */; };
 		113458CD19A7AC2B009D29AB /* worlddestroyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458CC19A7AC2B009D29AB /* worlddestroyTests.m */; };
-		113458DF19A7AC54009D29AB /* AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */; };
-		113458E119A7AC54009D29AB /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */; };
 		113458E619A7AFF8009D29AB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458E519A7AFF8009D29AB /* ImageIO.framework */; };
 		1134590019A810B7009D29AB /* ExplosionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 113458FF19A810B7009D29AB /* ExplosionAnnotation.m */; };
 		1134590319A811DC009D29AB /* WorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590219A811DC009D29AB /* WorldMap.m */; };
 		1134590719A81323009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590619A81323009D29AB /* ViewController.m */; };
 		1134590919A8298E009D29AB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1134590819A8298E009D29AB /* GameKit.framework */; };
+		11744D3619ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 11744D3519ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m */; };
+		11744D3919ACEBB9002E34B9 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 11744D3819ACEBB9002E34B9 /* UIImage+animatedGIF.m */; };
 		11A9574C19A85A8100DA162C /* atari_boom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11A9574B19A85A8100DA162C /* atari_boom.mp3 */; };
 		11A9575B19A85A9B00DA162C /* crater_parkmayn.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A9575119A85A9B00DA162C /* crater_parkmayn.png */; };
 		11A9576519A85AB500DA162C /* explosion (1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9576119A85AB500DA162C /* explosion (1).gif */; };
@@ -85,10 +85,6 @@
 		113458C819A7AC2B009D29AB /* worlddestroyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "worlddestroyTests-Info.plist"; sourceTree = "<group>"; };
 		113458CA19A7AC2B009D29AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		113458CC19A7AC2B009D29AB /* worlddestroyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = worlddestroyTests.m; sourceTree = "<group>"; };
-		113458D719A7AC54009D29AB /* AnimatedGIFImageSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimatedGIFImageSerialization.h; path = "../../../Downloads/AnimatedGIFImageSerialization-master/AnimatedGIFImageSerialization/AnimatedGIFImageSerialization.h"; sourceTree = "<group>"; };
-		113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimatedGIFImageSerialization.m; path = "../../../Downloads/AnimatedGIFImageSerialization-master/AnimatedGIFImageSerialization/AnimatedGIFImageSerialization.m"; sourceTree = "<group>"; };
-		113458DA19A7AC54009D29AB /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+animatedGIF.h"; path = "../../../Downloads/uiimage-from-animated-gif-master/uiimage-from-animated-gif/UIImage+animatedGIF.h"; sourceTree = "<group>"; };
-		113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+animatedGIF.m"; path = "../../../Downloads/uiimage-from-animated-gif-master/uiimage-from-animated-gif/UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		113458E519A7AFF8009D29AB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		113458FE19A8102E009D29AB /* ExplosionAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExplosionAnnotation.h; sourceTree = "<group>"; };
 		113458FF19A810B7009D29AB /* ExplosionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplosionAnnotation.m; sourceTree = "<group>"; };
@@ -97,6 +93,10 @@
 		1134590519A81323009D29AB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1134590619A81323009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1134590819A8298E009D29AB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		11744D3419ACEB9D002E34B9 /* AnimatedGIFImageSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedGIFImageSerialization.h; sourceTree = "<group>"; };
+		11744D3519ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedGIFImageSerialization.m; sourceTree = "<group>"; };
+		11744D3719ACEBB9002E34B9 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		11744D3819ACEBB9002E34B9 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		11A9574B19A85A8100DA162C /* atari_boom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = atari_boom.mp3; sourceTree = "<group>"; };
 		11A9575119A85A9B00DA162C /* crater_parkmayn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crater_parkmayn.png; sourceTree = "<group>"; };
 		11A9576119A85AB500DA162C /* explosion (1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "explosion (1).gif"; sourceTree = "<group>"; };
@@ -293,10 +293,10 @@
 		1134590419A8128A009D29AB /* gifSupport */ = {
 			isa = PBXGroup;
 			children = (
-				113458D719A7AC54009D29AB /* AnimatedGIFImageSerialization.h */,
-				113458D819A7AC54009D29AB /* AnimatedGIFImageSerialization.m */,
-				113458DA19A7AC54009D29AB /* UIImage+animatedGIF.h */,
-				113458DB19A7AC54009D29AB /* UIImage+animatedGIF.m */,
+				11744D3419ACEB9D002E34B9 /* AnimatedGIFImageSerialization.h */,
+				11744D3719ACEBB9002E34B9 /* UIImage+animatedGIF.h */,
+				11744D3819ACEBB9002E34B9 /* UIImage+animatedGIF.m */,
+				11744D3519ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m */,
 			);
 			name = gifSupport;
 			sourceTree = "<group>";
@@ -447,13 +447,13 @@
 				11A9578F19AAEFD900DA162C /* REFrostedContainerViewController.m in Sources */,
 				11A9576D19A867E200DA162C /* TimerView.m in Sources */,
 				11A9579019AAEFD900DA162C /* REFrostedViewController.m in Sources */,
-				113458DF19A7AC54009D29AB /* AnimatedGIFImageSerialization.m in Sources */,
-				113458E119A7AC54009D29AB /* UIImage+animatedGIF.m in Sources */,
 				113458B819A7AC2B009D29AB /* AppDelegate.m in Sources */,
 				11A9579119AAEFD900DA162C /* UIImage+REFrostedViewController.m in Sources */,
 				113458B419A7AC2B009D29AB /* main.m in Sources */,
 				1134590019A810B7009D29AB /* ExplosionAnnotation.m in Sources */,
+				11744D3619ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m in Sources */,
 				11A9579219AAEFD900DA162C /* UIView+REFrostedViewController.m in Sources */,
+				11744D3919ACEBB9002E34B9 /* UIImage+animatedGIF.m in Sources */,
 				11A9578019AAC77900DA162C /* SlideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
