@@ -20,8 +20,9 @@
     
     ViewController *mainController = [[ViewController alloc] init];
     mainController.delegate = self;
-
+    
     SlideViewController *menuController = [[SlideViewController alloc] initWithStyle:UITableViewStylePlain];
+    mainController.menu = menuController;
     
     // Create frosted view controller
     //

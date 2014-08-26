@@ -18,6 +18,7 @@
 #import "TimerView.h"
 #import "AppDelegate.h"
 #import "UIViewController+REFrostedViewController.h"
+#import "SlideViewController.h"
 
 @interface ViewController : UIViewController <MKMapViewDelegate, UIGestureRecognizerDelegate> {
     AVAudioPlayer *_audioPlayer;
@@ -29,6 +30,6 @@
 @property (strong, nonatomic) IBOutlet NSMutableArray *craters;
 @property (strong, nonatomic) IBOutlet NSMutableArray *stillExploding;
 @property (strong, nonatomic) IBOutlet NSMutableArray *stillExplodingViews;
-
+@property (strong, nonatomic) SlideViewController *menu;
 - (void)onTimer;
 @end

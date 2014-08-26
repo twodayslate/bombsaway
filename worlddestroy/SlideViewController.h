@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+REFrostedViewController.h"
+#import "REFrostedViewController.h"
+#import "WorldMap.h"
 
-@interface SlideViewController : UITableViewController
-
+@interface SlideViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet NSArray *countries;
+@property (strong, nonatomic) IBOutlet NSArray *coordinates;
+@property (strong, nonatomic) WorldMap *mapView;
 @end

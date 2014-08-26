@@ -167,6 +167,8 @@ static BOOL shake = NO;
     ammo.alpha = 0.8;
     [self.view addSubview:ammo];
     
+    _menu.mapView = _mapView;
+    
     if(!_stillExploding) _stillExploding = [[NSMutableArray alloc] init];
 }
 
