@@ -55,22 +55,25 @@
     [_sectionsArray addObject:@"cities"];
     [_sectionsArray addObject:@"about"];
     
-    
-    
     // Do any additional setup after loading the view.
 }
 
 - (int)getBannerHeight:(UIDeviceOrientation)orientation {
-    if (UIInterfaceOrientationIsLandscape(orientation)) {
-        return 32;
-    } else {
-        return 50;
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if (UIInterfaceOrientationIsLandscape(orientation)) {
+            return 32;
+        } else {
+            return 50;
+        }
     }
+    else return 66; //iPad
 }
 
 - (ADBannerView *)adBannerView {
-    ADBannerView *adView = [[ADBannerView alloc] init];
-    return adView;
+    if(!_adView) {
+        _adView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+    }
+    return _adView;
 }
 
 - (int)getBannerHeight {
@@ -91,7 +94,7 @@
     NSString *type = [_sectionsArray objectAtIndex:section];
 
     if([type isEqual:@"ads"]) {
-        return 1;
+        return 0;
     } else if([type isEqual:@"cities"]) {
         return [_cities count];
     } else if([type isEqual:@"about"]) {
@@ -146,7 +149,7 @@
             // iAP here
         }
     } else if([type isEqual:@"cities"]) {
-        [self goToCity:indexPath.row];
+        [self goToCity:(int)indexPath.row ];
         [self.frostedViewController hideMenuViewController];
     } else if([type isEqual:@"about"]) {
         if(indexPath.row == 0) {

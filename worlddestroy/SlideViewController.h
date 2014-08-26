@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet NSMutableArray *sectionsArray;
 @property (strong, nonatomic) WorldMap *mapView;
 @property (nonatomic, assign) BOOL ads;
+@property (strong, nonatomic) ADBannerView *adView;
 
 - (void)launchTwitter:(NSString *)username;
 - (int)getBannerHeight;

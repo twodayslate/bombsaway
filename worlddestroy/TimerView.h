@@ -10,4 +10,6 @@
 
 @interface TimerView : UIView
 @property (strong, nonatomic) UIColor *color;
++(UIColor *)greenColor;
++(UIColor *)redColor;
 @end

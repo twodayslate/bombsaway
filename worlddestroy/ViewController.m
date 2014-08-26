@@ -157,7 +157,7 @@ static BOOL shake = NO;
     
     
     _timerView = [[TimerView alloc] initWithFrame:CGRectMake(0,_mapView.frame.size.height-10,_mapView.frame.size.width,10)];
-    [_timerView setColor:[UIColor colorWithRed:0/256.0 green:256/256.0 blue:0/256.0 alpha:0.3]];
+    [_timerView setColor:[TimerView greenColor]];
     [self.view addSubview:_timerView];
     [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.01];
 
@@ -183,7 +183,7 @@ static BOOL shake = NO;
     if(_timerView.frame.size.width < _mapView.frame.size.width){
         [self performSelector:@selector(onTimer) withObject:nil afterDelay:0.1];
     } else {
-        [_timerView setColor:[UIColor colorWithRed:0/256.0 green:256/256.0 blue:0/256.0 alpha:0.3]];
+        [_timerView setColor:[TimerView greenColor]];
         [_timerView setNeedsDisplay];
     }
 }
@@ -234,8 +234,7 @@ static BOOL shake = NO;
 
 -(void)resetTimer {
     _timerView.frame = CGRectMake(_timerView.frame.origin.x, _timerView.frame.origin.y,1,_timerView.frame.size.height);
-    UIColor *color = [UIColor colorWithRed:256/256.0 green:0/256.0 blue:0/256.0 alpha:0.3];
-    [_timerView setColor:color];
+    [_timerView setColor:[TimerView redColor]];
     [_timerView setNeedsDisplay];
 }
 
@@ -318,7 +317,7 @@ static BOOL shake = NO;
          _timerView.frame = CGRectMake(0,_mapView.frame.size.height-_timerView.frame.size.height,_timerView.frame.size.width,_timerView.frame.size.height);
      }];
     
-    if([_timerView.color isEqual:[UIColor colorWithRed:0/256.0 green:256/256.0 blue:0/256.0 alpha:0.3]]) {
+    if([_timerView.color isEqual:[TimerView greenColor]]) {
         [UIView
          animateWithDuration:0.01
          animations:^{
