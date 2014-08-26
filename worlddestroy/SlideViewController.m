@@ -23,7 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.tableView.opaque = NO;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -55,7 +55,26 @@
     [_sectionsArray addObject:@"cities"];
     [_sectionsArray addObject:@"about"];
     
+    
+    
     // Do any additional setup after loading the view.
+}
+
+- (int)getBannerHeight:(UIDeviceOrientation)orientation {
+    if (UIInterfaceOrientationIsLandscape(orientation)) {
+        return 32;
+    } else {
+        return 50;
+    }
+}
+
+- (ADBannerView *)adBannerView {
+    ADBannerView *adView = [[ADBannerView alloc] init];
+    return adView;
+}
+
+- (int)getBannerHeight {
+    return [self getBannerHeight:[UIDevice currentDevice].orientation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,7 +91,7 @@
     NSString *type = [_sectionsArray objectAtIndex:section];
 
     if([type isEqual:@"ads"]) {
-        return 2;
+        return 1;
     } else if([type isEqual:@"cities"]) {
         return [_cities count];
     } else if([type isEqual:@"about"]) {
@@ -93,12 +112,7 @@
     NSString *type = [_sectionsArray objectAtIndex:indexPath.section];
     
     if([type isEqual:@"ads"]) {
-        if(indexPath.row == 0) {
-            ADBannerView *adView = [[ADBannerView alloc] initWithFrame:cell.frame];
-            [cell addSubview:adView];
-        } else {
-            cell.textLabel.text = @"Remove all ads - $0.99";
-        }
+        cell.textLabel.text = @"Remove all ads - $0.99";
     } else if([type isEqual:@"cities"]) {
         cell.textLabel.text = [_cities objectAtIndex:indexPath.row];
     } else if([type isEqual:@"about"]) {
@@ -196,11 +210,14 @@
     if([view isKindOfClass:[UITableViewHeaderFooterView class]]){
         
         UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *) view;
-        tableViewHeaderFooterView.textLabel.textColor = [UIColor whiteColor];
-        UIColor *color = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0.3];
-        tableViewHeaderFooterView.tintColor = color;
+
+            tableViewHeaderFooterView.textLabel.textColor = [UIColor whiteColor];
+            UIColor *color = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0.3];
+            tableViewHeaderFooterView.tintColor = color;
+        
     }
 }
+
 
 /*
 #pragma mark - Navigation
@@ -212,5 +229,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *header = [super tableView:tableView viewForHeaderInSection:section];
+    if(_ads && section == 0) {
+        return [self adBannerView];
+    }
+    return header;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if(_ads && section == 0) {
+        return [self getBannerHeight];
+    } else {
+        return 25;
+    }
+}
 
 @end

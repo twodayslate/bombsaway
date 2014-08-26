@@ -22,4 +22,7 @@
 @property (nonatomic, assign) BOOL ads;
 
 - (void)launchTwitter:(NSString *)username;
+- (int)getBannerHeight;
+- (int)getBannerHeight:(UIDeviceOrientation)orientation;
 @end
+
