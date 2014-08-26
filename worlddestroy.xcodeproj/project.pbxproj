@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8D263ADC964241AA022148 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A52EBB240874D1ABB13A1C2 /* libPods.a */; };
 		113458A819A7AC2B009D29AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458A719A7AC2B009D29AB /* Foundation.framework */; };
 		113458AA19A7AC2B009D29AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458A919A7AC2B009D29AB /* CoreGraphics.framework */; };
 		113458AC19A7AC2B009D29AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113458AB19A7AC2B009D29AB /* UIKit.framework */; };
@@ -24,8 +25,6 @@
 		1134590319A811DC009D29AB /* WorldMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590219A811DC009D29AB /* WorldMap.m */; };
 		1134590719A81323009D29AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590619A81323009D29AB /* ViewController.m */; };
 		1134590919A8298E009D29AB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1134590819A8298E009D29AB /* GameKit.framework */; };
-		11744D3619ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 11744D3519ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m */; };
-		11744D3919ACEBB9002E34B9 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 11744D3819ACEBB9002E34B9 /* UIImage+animatedGIF.m */; };
 		11A9574C19A85A8100DA162C /* atari_boom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11A9574B19A85A8100DA162C /* atari_boom.mp3 */; };
 		11A9575B19A85A9B00DA162C /* crater_parkmayn.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A9575119A85A9B00DA162C /* crater_parkmayn.png */; };
 		11A9576519A85AB500DA162C /* explosion (1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9576119A85AB500DA162C /* explosion (1).gif */; };
@@ -69,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A52EBB240874D1ABB13A1C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		113458A419A7AC2B009D29AB /* worlddestroy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worlddestroy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113458A719A7AC2B009D29AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		113458A919A7AC2B009D29AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,10 +93,6 @@
 		1134590519A81323009D29AB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1134590619A81323009D29AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1134590819A8298E009D29AB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		11744D3419ACEB9D002E34B9 /* AnimatedGIFImageSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedGIFImageSerialization.h; sourceTree = "<group>"; };
-		11744D3519ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedGIFImageSerialization.m; sourceTree = "<group>"; };
-		11744D3719ACEBB9002E34B9 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
-		11744D3819ACEBB9002E34B9 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		11A9574B19A85A8100DA162C /* atari_boom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = atari_boom.mp3; sourceTree = "<group>"; };
 		11A9575119A85A9B00DA162C /* crater_parkmayn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crater_parkmayn.png; sourceTree = "<group>"; };
 		11A9576119A85AB500DA162C /* explosion (1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "explosion (1).gif"; sourceTree = "<group>"; };
@@ -135,6 +131,7 @@
 		11A959E719AB1D5200DA162C /* menu-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-512.png"; sourceTree = "<group>"; };
 		11A959E919AB1D6000DA162C /* menu-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-128.png"; sourceTree = "<group>"; };
 		11AEC1BB19ABEDA000245EDE /* small_bomb_16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = small_bomb_16.gif; sourceTree = "<group>"; };
+		17EE85BD1FCC41929B8F9A82 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +149,7 @@
 				113458AC19A7AC2B009D29AB /* UIKit.framework in Frameworks */,
 				113458A819A7AC2B009D29AB /* Foundation.framework in Frameworks */,
 				1134590919A8298E009D29AB /* GameKit.framework in Frameworks */,
+				0A8D263ADC964241AA022148 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +173,7 @@
 				113458C619A7AC2B009D29AB /* worlddestroyTests */,
 				113458A619A7AC2B009D29AB /* Frameworks */,
 				113458A519A7AC2B009D29AB /* Products */,
+				17EE85BD1FCC41929B8F9A82 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +200,7 @@
 				113458A919A7AC2B009D29AB /* CoreGraphics.framework */,
 				113458AB19A7AC2B009D29AB /* UIKit.framework */,
 				113458C019A7AC2B009D29AB /* XCTest.framework */,
+				0A52EBB240874D1ABB13A1C2 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				11A9578119AAEFD900DA162C /* REFrostedViewController */,
-				1134590419A8128A009D29AB /* gifSupport */,
 				113458FC19A80FAD009D29AB /* sounds */,
 				113458FB19A80F82009D29AB /* images */,
 				1134590219A811DC009D29AB /* WorldMap.m */,
@@ -290,17 +289,6 @@
 			name = sounds;
 			sourceTree = "<group>";
 		};
-		1134590419A8128A009D29AB /* gifSupport */ = {
-			isa = PBXGroup;
-			children = (
-				11744D3419ACEB9D002E34B9 /* AnimatedGIFImageSerialization.h */,
-				11744D3719ACEBB9002E34B9 /* UIImage+animatedGIF.h */,
-				11744D3819ACEBB9002E34B9 /* UIImage+animatedGIF.m */,
-				11744D3519ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m */,
-			);
-			name = gifSupport;
-			sourceTree = "<group>";
-		};
 		11A9578119AAEFD900DA162C /* REFrostedViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 113458D019A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroy" */;
 			buildPhases = (
+				59DA4575C1A84719ADC74253 /* Check Pods Manifest.lock */,
 				113458A019A7AC2B009D29AB /* Sources */,
 				113458A119A7AC2B009D29AB /* Frameworks */,
 				113458A219A7AC2B009D29AB /* Resources */,
+				F8CA3B17AD134F779C9402CD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -435,6 +425,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		59DA4575C1A84719ADC74253 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8CA3B17AD134F779C9402CD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		113458A019A7AC2B009D29AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -451,9 +474,7 @@
 				11A9579119AAEFD900DA162C /* UIImage+REFrostedViewController.m in Sources */,
 				113458B419A7AC2B009D29AB /* main.m in Sources */,
 				1134590019A810B7009D29AB /* ExplosionAnnotation.m in Sources */,
-				11744D3619ACEB9D002E34B9 /* AnimatedGIFImageSerialization.m in Sources */,
 				11A9579219AAEFD900DA162C /* UIView+REFrostedViewController.m in Sources */,
-				11744D3919ACEBB9002E34B9 /* UIImage+animatedGIF.m in Sources */,
 				11A9578019AAC77900DA162C /* SlideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +591,7 @@
 		};
 		113458D119A7AC2B009D29AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17EE85BD1FCC41929B8F9A82 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -591,6 +613,7 @@
 		};
 		113458D219A7AC2B009D29AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17EE85BD1FCC41929B8F9A82 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
