@@ -70,18 +70,18 @@
 
 /* Begin PBXFileReference section */
 		0A52EBB240874D1ABB13A1C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		113458A419A7AC2B009D29AB /* worlddestroy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worlddestroy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		113458A419A7AC2B009D29AB /* bombsaway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bombsaway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		113458A719A7AC2B009D29AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		113458A919A7AC2B009D29AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		113458AB19A7AC2B009D29AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		113458AF19A7AC2B009D29AB /* worlddestroy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "worlddestroy-Info.plist"; sourceTree = "<group>"; };
+		113458AF19A7AC2B009D29AB /* bombsaway-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bombsaway-Info.plist"; sourceTree = "<group>"; };
 		113458B119A7AC2B009D29AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		113458B319A7AC2B009D29AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		113458B519A7AC2B009D29AB /* worlddestroy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "worlddestroy-Prefix.pch"; sourceTree = "<group>"; };
+		113458B519A7AC2B009D29AB /* bombsaway-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bombsaway-Prefix.pch"; sourceTree = "<group>"; };
 		113458B619A7AC2B009D29AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		113458B719A7AC2B009D29AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		113458B919A7AC2B009D29AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		113458BF19A7AC2B009D29AB /* worlddestroyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = worlddestroyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		113458BF19A7AC2B009D29AB /* bombsawayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bombsawayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		113458C019A7AC2B009D29AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		113458C819A7AC2B009D29AB /* worlddestroyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "worlddestroyTests-Info.plist"; sourceTree = "<group>"; };
 		113458CA19A7AC2B009D29AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -172,8 +172,8 @@
 		1134589B19A7AC2B009D29AB = {
 			isa = PBXGroup;
 			children = (
-				113458AD19A7AC2B009D29AB /* worlddestroy */,
-				113458C619A7AC2B009D29AB /* worlddestroyTests */,
+				113458AD19A7AC2B009D29AB /* bombsaway */,
+				113458C619A7AC2B009D29AB /* bombsawayTests */,
 				113458A619A7AC2B009D29AB /* Frameworks */,
 				113458A519A7AC2B009D29AB /* Products */,
 				17EE85BD1FCC41929B8F9A82 /* Pods.xcconfig */,
@@ -183,8 +183,8 @@
 		113458A519A7AC2B009D29AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				113458A419A7AC2B009D29AB /* worlddestroy.app */,
-				113458BF19A7AC2B009D29AB /* worlddestroyTests.xctest */,
+				113458A419A7AC2B009D29AB /* bombsaway.app */,
+				113458BF19A7AC2B009D29AB /* bombsawayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		113458AD19A7AC2B009D29AB /* worlddestroy */ = {
+		113458AD19A7AC2B009D29AB /* bombsaway */ = {
 			isa = PBXGroup;
 			children = (
 				11A9578119AAEFD900DA162C /* REFrostedViewController */,
@@ -231,26 +231,28 @@
 				113458B919A7AC2B009D29AB /* Images.xcassets */,
 				113458AE19A7AC2B009D29AB /* Supporting Files */,
 			);
+			name = bombsaway;
 			path = worlddestroy;
 			sourceTree = "<group>";
 		};
 		113458AE19A7AC2B009D29AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				113458AF19A7AC2B009D29AB /* worlddestroy-Info.plist */,
+				113458AF19A7AC2B009D29AB /* bombsaway-Info.plist */,
 				113458B019A7AC2B009D29AB /* InfoPlist.strings */,
 				113458B319A7AC2B009D29AB /* main.m */,
-				113458B519A7AC2B009D29AB /* worlddestroy-Prefix.pch */,
+				113458B519A7AC2B009D29AB /* bombsaway-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		113458C619A7AC2B009D29AB /* worlddestroyTests */ = {
+		113458C619A7AC2B009D29AB /* bombsawayTests */ = {
 			isa = PBXGroup;
 			children = (
 				113458CC19A7AC2B009D29AB /* worlddestroyTests.m */,
 				113458C719A7AC2B009D29AB /* Supporting Files */,
 			);
+			name = bombsawayTests;
 			path = worlddestroyTests;
 			sourceTree = "<group>";
 		};
@@ -316,9 +318,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		113458A319A7AC2B009D29AB /* worlddestroy */ = {
+		113458A319A7AC2B009D29AB /* bombsaway */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 113458D019A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroy" */;
+			buildConfigurationList = 113458D019A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "bombsaway" */;
 			buildPhases = (
 				59DA4575C1A84719ADC74253 /* Check Pods Manifest.lock */,
 				113458A019A7AC2B009D29AB /* Sources */,
@@ -330,14 +332,14 @@
 			);
 			dependencies = (
 			);
-			name = worlddestroy;
+			name = bombsaway;
 			productName = worlddestroy;
-			productReference = 113458A419A7AC2B009D29AB /* worlddestroy.app */;
+			productReference = 113458A419A7AC2B009D29AB /* bombsaway.app */;
 			productType = "com.apple.product-type.application";
 		};
-		113458BE19A7AC2B009D29AB /* worlddestroyTests */ = {
+		113458BE19A7AC2B009D29AB /* bombsawayTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 113458D319A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroyTests" */;
+			buildConfigurationList = 113458D319A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "bombsawayTests" */;
 			buildPhases = (
 				113458BB19A7AC2B009D29AB /* Sources */,
 				113458BC19A7AC2B009D29AB /* Frameworks */,
@@ -348,9 +350,9 @@
 			dependencies = (
 				113458C519A7AC2B009D29AB /* PBXTargetDependency */,
 			);
-			name = worlddestroyTests;
+			name = bombsawayTests;
 			productName = worlddestroyTests;
-			productReference = 113458BF19A7AC2B009D29AB /* worlddestroyTests.xctest */;
+			productReference = 113458BF19A7AC2B009D29AB /* bombsawayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -375,7 +377,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1134589F19A7AC2B009D29AB /* Build configuration list for PBXProject "worlddestroy" */;
+			buildConfigurationList = 1134589F19A7AC2B009D29AB /* Build configuration list for PBXProject "bombsaway" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -387,8 +389,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				113458A319A7AC2B009D29AB /* worlddestroy */,
-				113458BE19A7AC2B009D29AB /* worlddestroyTests */,
+				113458A319A7AC2B009D29AB /* bombsaway */,
+				113458BE19A7AC2B009D29AB /* bombsawayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -498,7 +500,7 @@
 /* Begin PBXTargetDependency section */
 		113458C519A7AC2B009D29AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 113458A319A7AC2B009D29AB /* worlddestroy */;
+			target = 113458A319A7AC2B009D29AB /* bombsaway */;
 			targetProxy = 113458C419A7AC2B009D29AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -606,13 +608,13 @@
 					"$(PROJECT_DIR)/worlddestroy/build/Debug-iphoneos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "worlddestroy/worlddestroy-Prefix.pch";
-				INFOPLIST_FILE = "worlddestroy/worlddestroy-Info.plist";
+				GCC_PREFIX_HEADER = "worlddestroy/bombsaway-Prefix.pch";
+				INFOPLIST_FILE = "worlddestroy/bombsaway-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/zac/Development/GPUImage/build/Release-iphoneos",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bombsaway;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -628,13 +630,13 @@
 					"$(PROJECT_DIR)/worlddestroy/build/Debug-iphoneos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "worlddestroy/worlddestroy-Prefix.pch";
-				INFOPLIST_FILE = "worlddestroy/worlddestroy-Info.plist";
+				GCC_PREFIX_HEADER = "worlddestroy/bombsaway-Prefix.pch";
+				INFOPLIST_FILE = "worlddestroy/bombsaway-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/zac/Development/GPUImage/build/Release-iphoneos",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bombsaway;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -655,7 +657,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "worlddestroyTests/worlddestroyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bombsawayTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -673,7 +675,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "worlddestroy/worlddestroy-Prefix.pch";
 				INFOPLIST_FILE = "worlddestroyTests/worlddestroyTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bombsawayTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -682,7 +684,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1134589F19A7AC2B009D29AB /* Build configuration list for PBXProject "worlddestroy" */ = {
+		1134589F19A7AC2B009D29AB /* Build configuration list for PBXProject "bombsaway" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				113458CE19A7AC2B009D29AB /* Debug */,
@@ -691,7 +693,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		113458D019A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroy" */ = {
+		113458D019A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "bombsaway" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				113458D119A7AC2B009D29AB /* Debug */,
@@ -700,7 +702,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		113458D319A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "worlddestroyTests" */ = {
+		113458D319A7AC2B009D29AB /* Build configuration list for PBXNativeTarget "bombsawayTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				113458D419A7AC2B009D29AB /* Debug */,
