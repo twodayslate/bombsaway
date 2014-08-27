@@ -30,13 +30,15 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:0.50f];
     
-    _cities = @[@"Beijing", @"London",
+    _cities = @[@"Your location",
+                   @"Beijing", @"London",
                    @"New York City", @"Moscow",
                    @"Tokyo", @"Chicago",
                    @"Hong Kong", @"Paris",
                    @"Washington D.C."];
     //Eventually add user location
-    _coordinates = @[ @[@39.9139, @116.3917], @[@51.5072, @0.1275],
+    _coordinates = @[ @[[NSNumber numberWithDouble:_mapView.userLocation.location.coordinate.latitude], [NSNumber numberWithDouble:_mapView.userLocation.location.coordinate.longitude]],
+                      @[@39.9139, @116.3917], @[@51.5072, @0.1275],
                       @[@40.7127, @74.0059], @[@55.7500, @37.6167],
                       @[@35.6895, @139.6917], @[@41.8819, @87.6278],
                       @[@22.2670, @114.1880], @[@48.8567, @2.3508],

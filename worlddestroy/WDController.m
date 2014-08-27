@@ -157,7 +157,6 @@ static BOOL shake = NO;
     [self.view addSubview:_ammoButton];
     
     _menu.mapView = _mapView;
-    
     if(!_stillExploding) _stillExploding = [[NSMutableArray alloc] init];
 }
 
