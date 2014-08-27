@@ -1,4 +1,4 @@
-World Destroy
+Bombs Away!
 ===================
 
 A simple iOS game, tap to destroy!
@@ -11,6 +11,7 @@ Todo
 * Add more bomb types
 * Add more sounds
 * IAPs: remove ads, buy all bomb types, buy all sounds
+* Add bomb-drob animation
 
 Bugs
 ------------
