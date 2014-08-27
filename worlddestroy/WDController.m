@@ -199,6 +199,8 @@ static BOOL shake = NO;
         _audioPlayer.numberOfLoops = 0;
         [_audioPlayer play];
         
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        
         [_timerView reset];
     }
     
