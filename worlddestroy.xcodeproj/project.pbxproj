@@ -225,11 +225,11 @@
 				113458FF19A810B7009D29AB /* ExplosionAnnotation.m */,
 				113458B619A7AC2B009D29AB /* AppDelegate.h */,
 				113458B719A7AC2B009D29AB /* AppDelegate.m */,
-				113458B919A7AC2B009D29AB /* Images.xcassets */,
-				113458AE19A7AC2B009D29AB /* Supporting Files */,
 				113458FE19A8102E009D29AB /* ExplosionAnnotation.h */,
 				11A9576B19A8679200DA162C /* TimerView.h */,
 				11A9576C19A867E200DA162C /* TimerView.m */,
+				113458B919A7AC2B009D29AB /* Images.xcassets */,
+				113458AE19A7AC2B009D29AB /* Supporting Files */,
 			);
 			path = worlddestroy;
 			sourceTree = "<group>";

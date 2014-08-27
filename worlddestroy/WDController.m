@@ -152,7 +152,8 @@ static BOOL shake = NO;
 //    _ammoView = [[AmmoView alloc] initWithController:self];
 //    [self.view addSubview:_ammoView];
     
-    _ammoButton = [[AmmoButton alloc] initWithController:self];
+    _ammoButton = [AmmoButton buttonWithType:UIButtonTypeCustom];
+    [_ammoButton setFrame:CGRectMake(self.view.frame.size.width-50, self.view.frame.size.height-50, 50, 50)];
     [self.view addSubview:_ammoButton];
     
     _menu.mapView = _mapView;
@@ -278,7 +279,11 @@ static BOOL shake = NO;
     [self readdCraters];
     
     [_timerView rotate];
-    //[_ammoButton rotate];
+    [UIView
+     animateWithDuration:0.01
+     animations:^{
+         _ammoButton.frame = CGRectMake(self.mapView.frame.size.width-50, self.mapView.frame.size.height-50, 50, 50);
+     }];
 }
 
 - (void)didReceiveMemoryWarning

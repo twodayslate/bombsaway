@@ -12,6 +12,4 @@
 @class WDController;
 
 @interface AmmoButton : UIButton
-@property (strong, nonatomic) WDController *controller;
--(id)initWithController:(WDController *)controller;
 @end
