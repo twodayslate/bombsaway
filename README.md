@@ -7,9 +7,9 @@ A simple iOS game, tap to destroy!
 Todo
 ------------
 
-* Add score and gamecenter support 
-	Score = total number of bombs exploded
-* Add bomb icon with infinty sign (ammo ammount)
+* Add score and gamecenter support (total # of bombs exploded, most # of bombs exploded in a day)
+* IAPs: remove ads, buy all bomb types, buy all sounds
+* Go to your location
 
 Bugs
 ------------

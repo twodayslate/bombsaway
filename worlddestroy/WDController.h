@@ -19,14 +19,17 @@
 #import "AppDelegate.h"
 #import "UIViewController+REFrostedViewController.h"
 #import "SlideViewController.h"
+#import "AmmoButton.h"
 
 @class TimerView;
+@class AmmoButton;
 
 @interface WDController : UIViewController <MKMapViewDelegate, UIGestureRecognizerDelegate> {
     AVAudioPlayer *_audioPlayer;
 }
 @property (strong, nonatomic) WorldMap *mapView;
 @property (strong, nonatomic) TimerView *timerView;
+@property (strong, nonatomic) AmmoButton *ammoButton;
 @property (strong, nonatomic) AppDelegate *delegate;
 @property (weak, nonatomic) IBOutlet id explosion;
 @property (strong, nonatomic) IBOutlet NSMutableArray *craters;

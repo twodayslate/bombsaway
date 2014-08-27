@@ -149,12 +149,11 @@ static BOOL shake = NO;
     _timerView = [[TimerView alloc] initWithComparitor:self withDelay:0.1];
     [self.view addSubview:_timerView];
     
-
-    image = [UIImage imageNamed:@"small_bomb_16.gif"];
-    UIButton *ammo = [[UIButton alloc] initWithFrame:CGRectMake(_mapView.frame.size.width-40, _mapView.frame.size.height-40, 40, 40)];
-    [ammo setImage:image forState:UIControlStateNormal];
-    ammo.alpha = 0.8;
-    [self.view addSubview:ammo];
+//    _ammoView = [[AmmoView alloc] initWithController:self];
+//    [self.view addSubview:_ammoView];
+    
+    _ammoButton = [[AmmoButton alloc] initWithController:self];
+    [self.view addSubview:_ammoButton];
     
     _menu.mapView = _mapView;
     
@@ -279,13 +278,11 @@ static BOOL shake = NO;
     [self readdCraters];
     
     [_timerView rotate];
-    
-    //NSLog(@"new frame = (%f,%f)",_timerView.frame.origin.x,_timerView.frame.origin.y);
-    
+    //[_ammoButton rotate];
 }
 
 - (void)didReceiveMemoryWarning
-{
+{;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
