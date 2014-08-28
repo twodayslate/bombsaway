@@ -12,6 +12,7 @@ Todo
 * Add more sounds
 * IAPs: remove ads, buy all bomb types, buy all sounds
 * Add bomb-drob animation
+* Estimate # of people killed using geonames
 
 Bugs
 ------------

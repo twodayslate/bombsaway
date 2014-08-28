@@ -14,7 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setImage:[UIImage imageNamed:@"small_bomb_16.gif"] forState:UIControlStateNormal];
+        [self setImage:[UIImage imageNamed:@"bomb6.png"] forState:UIControlStateNormal];
         //[button setImageEdgeInsets:UIEdgeInsetsMake(0, -30, 0, 0)];
         [self setTitle:@"∞" forState:UIControlStateNormal];
         [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

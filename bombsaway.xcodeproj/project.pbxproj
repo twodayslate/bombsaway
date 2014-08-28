@@ -26,6 +26,7 @@
 		1134590719A81323009D29AB /* WDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1134590619A81323009D29AB /* WDController.m */; };
 		1134590919A8298E009D29AB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1134590819A8298E009D29AB /* GameKit.framework */; };
 		11744D3F19AD6506002E34B9 /* AmmoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 11744D3E19AD6506002E34B9 /* AmmoButton.m */; };
+		11744D4A19AFD82C002E34B9 /* bomb6.png in Resources */ = {isa = PBXBuildFile; fileRef = 11744D4919AFD82C002E34B9 /* bomb6.png */; };
 		11A9574C19A85A8100DA162C /* atari_boom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11A9574B19A85A8100DA162C /* atari_boom.mp3 */; };
 		11A9575B19A85A9B00DA162C /* crater_parkmayn.png in Resources */ = {isa = PBXBuildFile; fileRef = 11A9575119A85A9B00DA162C /* crater_parkmayn.png */; };
 		11A9576519A85AB500DA162C /* explosion (1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 11A9576119A85AB500DA162C /* explosion (1).gif */; };
@@ -96,6 +97,7 @@
 		1134590819A8298E009D29AB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		11744D3D19AD6506002E34B9 /* AmmoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmmoButton.h; sourceTree = "<group>"; };
 		11744D3E19AD6506002E34B9 /* AmmoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmmoButton.m; sourceTree = "<group>"; };
+		11744D4919AFD82C002E34B9 /* bomb6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb6.png; sourceTree = "<group>"; };
 		11A9574B19A85A8100DA162C /* atari_boom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = atari_boom.mp3; sourceTree = "<group>"; };
 		11A9575119A85A9B00DA162C /* crater_parkmayn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crater_parkmayn.png; sourceTree = "<group>"; };
 		11A9576119A85AB500DA162C /* explosion (1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "explosion (1).gif"; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 		113458FB19A80F82009D29AB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				11744D4919AFD82C002E34B9 /* bomb6.png */,
 				11AEC1BB19ABEDA000245EDE /* small_bomb_16.gif */,
 				11A959E919AB1D6000DA162C /* menu-128.png */,
 				11A959E719AB1D5200DA162C /* menu-512.png */,
@@ -410,6 +413,7 @@
 				11AEC1BC19ABEDA000245EDE /* small_bomb_16.gif in Resources */,
 				11A9576819A85AB500DA162C /* cratere.gif in Resources */,
 				11A9577D19A949F900DA162C /* explosion (4).gif in Resources */,
+				11744D4A19AFD82C002E34B9 /* bomb6.png in Resources */,
 				11A9577319A93C6600DA162C /* explosion-no-repeat (1).gif in Resources */,
 				11A9576519A85AB500DA162C /* explosion (1).gif in Resources */,
 				11A9577119A902E100DA162C /* crater_mine.gif in Resources */,

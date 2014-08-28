@@ -7,6 +7,7 @@
 //
 
 #import "WDController.h"
+#import "JSONKit.h"
 
 @implementation WDController
 
@@ -174,6 +175,8 @@ static BOOL shake = NO;
         
         CLLocationCoordinate2D tapPoint = [_mapView convertPoint:point toCoordinateFromView:self.view];
         
+        [self populationWithLatitude:[NSNumber numberWithDouble:tapPoint.latitude] andLongitude:[NSNumber numberWithDouble:tapPoint.longitude]];
+        
         MKPointAnnotation *point1 = [[MKPointAnnotation alloc] init];
         
         point1.coordinate = tapPoint;
@@ -204,6 +207,23 @@ static BOOL shake = NO;
         [_timerView reset];
     }
     
+}
+
+-(NSInteger *)populationWithLatitude:(NSNumber *)lat andLongitude:(NSNumber *)longitude {
+    
+    NSString *url = [@"http://api.geonames.org/findNearbyPlaceNameJSON?lat=" stringByAppendingString:[lat stringValue]];
+    url = [url stringByAppendingString:@"&lng="];
+    url = [url stringByAppendingString:[longitude stringValue]];
+    url = [url stringByAppendingString:@"&username=twodayslate"];
+    
+    NSData* jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    JSONDecoder* decoder = [[JSONDecoder alloc]
+                            initWithParseOptions:JKParseOptionNone];
+    NSArray* json = [decoder objectWithData:jsonData];
+    
+    NSLog(@"json = %@",json);
+    
+    return 0;
 }
 
 -(void)playExplosion:(id<MKAnnotation>)annotation {

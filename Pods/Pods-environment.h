@@ -30,6 +30,13 @@
 #define COCOAPODS_VERSION_MINOR_GPUImage 1
 #define COCOAPODS_VERSION_PATCH_GPUImage 5
 
+// JSONKit
+#define COCOAPODS_POD_AVAILABLE_JSONKit
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 1.5pre.
+
 // UIImage+animatedGif
 #define COCOAPODS_POD_AVAILABLE_UIImage_animatedGif
 #define COCOAPODS_VERSION_MAJOR_UIImage_animatedGif 0
