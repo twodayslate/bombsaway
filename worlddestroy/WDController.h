@@ -36,4 +36,5 @@
 @property (strong, nonatomic) IBOutlet NSMutableArray *stillExploding;
 @property (strong, nonatomic) IBOutlet NSMutableArray *stillExplodingViews;
 @property (strong, nonatomic) SlideViewController *menu;
+-(NSInteger *)populationWithLatitude:(NSNumber *)lat andLongitude:(NSNumber *)longitude;
 @end

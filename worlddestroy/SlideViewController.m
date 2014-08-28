@@ -118,7 +118,7 @@
     NSString *type = [_sectionsArray objectAtIndex:indexPath.section];
     
     if([type isEqual:@"ads"]) {
-        cell.textLabel.text = @"Remove all ads - $0.99";
+        cell.textLabel.text = @"Remove all ads";
     } else if([type isEqual:@"cities"]) {
         cell.textLabel.text = [_cities objectAtIndex:indexPath.row];
     } else if([type isEqual:@"about"]) {
