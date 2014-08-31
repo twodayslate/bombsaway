@@ -190,7 +190,7 @@ static BOOL shake = NO;
         //MKCircle *overlay = [MKCircle circleWithCenterCoordinate:tapPoint radius:1000];
         //[_mapView addOverlay:overlay];
         [_mapView addAnnotation:point1];
-        //[self shakeMap];
+        [self shakeMap];
         [self addAnimatedOverlayToAnnotation:point1];
         [self playExplosion:point1];
         
@@ -241,11 +241,18 @@ static BOOL shake = NO;
 
 -(void)shakeMap {
     shake = YES;
-    CLLocationCoordinate2D start = _mapView.centerCoordinate;
-    CLLocationCoordinate2D new = start;
-    new.latitude = new.latitude + 1;
-    [_mapView setCenterCoordinate:new animated:NO];
-    [_mapView setCenterCoordinate:start animated:YES];
+    CGRect rect = _mapView.frame;
+    rect.origin.y = rect.origin.y - 5;
+    _mapView.frame = rect;
+    _mapView.frame = rect;
+    rect.origin.y = rect.origin.y + 5;
+    [UIView animateWithDuration:0.01 animations:^{_mapView.frame = rect;}];
+    
+//    CLLocationCoordinate2D start = _mapView.centerCoordinate;
+//    CLLocationCoordinate2D new = start;
+//    new.latitude = new.latitude + 1;
+//    [_mapView setCenterCoordinate:new animated:NO];
+//    [_mapView setCenterCoordinate:start animated:YES];
     [self performSelector:@selector(setShake) withObject:nil afterDelay:0.2];
 }
 
