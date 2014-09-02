@@ -7,7 +7,6 @@
 //
 
 #import "WDController.h"
-#import "JSONKit.h"
 
 @implementation WDController
 
@@ -217,9 +216,7 @@ static BOOL shake = NO;
     url = [url stringByAppendingString:@"&username=twodayslate"];
     
     NSData* jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
-    JSONDecoder* decoder = [[JSONDecoder alloc]
-                            initWithParseOptions:JKParseOptionNone];
-    NSArray* json = [decoder objectWithData:jsonData];
+    NSArray* json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:NULL];
     
     NSLog(@"json = %@",json);
     
