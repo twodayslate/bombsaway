@@ -39,10 +39,10 @@
     //Eventually add user location
     _coordinates = @[ @[[NSNumber numberWithDouble:_mapView.userLocation.location.coordinate.latitude], [NSNumber numberWithDouble:_mapView.userLocation.location.coordinate.longitude]],
                       @[@39.9139, @116.3917], @[@51.5072, @0.1275],
-                      @[@40.7127, @74.0059], @[@55.7500, @37.6167],
-                      @[@35.6895, @139.6917], @[@41.8819, @87.6278],
+                      @[@40.7127, @-74.0059], @[@55.7500, @37.6167],
+                      @[@35.6895, @139.6917], @[@41.8819, @-87.6278],
                       @[@22.2670, @114.1880], @[@48.8567, @2.3508],
-                      @[@38.8951, @77.0367] ]; // Thanks Google :)
+                      @[@38.8951, @-77.0367] ]; // Thanks Google :)
     
     _ads = YES;
     
