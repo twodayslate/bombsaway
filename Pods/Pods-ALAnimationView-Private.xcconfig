@@ -1,5 +1,5 @@
 #include "Pods-ALAnimationView.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/ALAnimationView" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ALAnimationView" "${PODS_ROOT}/Headers/AnimatedGIFImageSerialization" "${PODS_ROOT}/Headers/AnimatedGif" "${PODS_ROOT}/Headers/GPUImage" "${PODS_ROOT}/Headers/JSONKit" "${PODS_ROOT}/Headers/UIImage+animatedGif"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/ALAnimationView" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/ALAnimationView" "${PODS_ROOT}/Headers/AnimatedGIFImageSerialization" "${PODS_ROOT}/Headers/AnimatedGif" "${PODS_ROOT}/Headers/GPUImage" "${PODS_ROOT}/Headers/UIImage+animatedGif"
 OTHER_LDFLAGS = -ObjC ${PODS_ALANIMATIONVIEW_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}
