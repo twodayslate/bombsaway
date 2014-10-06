@@ -304,6 +304,7 @@ static BOOL shake = NO;
     [self readdCraters];
     
     [_timerView rotate];
+    
     [UIView
      animateWithDuration:0.01
      animations:^{

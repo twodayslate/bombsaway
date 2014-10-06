@@ -82,7 +82,7 @@
          self.frame = CGRectMake(0,_comparison.mapView.frame.size.height-self.frame.size.height,self.frame.size.width,self.frame.size.height);
      }];
     
-    if([self isMax]) {
+    if([self isMax] || [_color isEqual:[TimerView greenColor]]) {
         [UIView
          animateWithDuration:0.01
          animations:^{

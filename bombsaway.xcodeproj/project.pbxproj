@@ -368,7 +368,7 @@
 				ORGANIZATIONNAME = PRNDL;
 				TargetAttributes = {
 					113458A319A7AC2B009D29AB = {
-						DevelopmentTeam = 3QFVVU34MZ;
+						DevelopmentTeam = C6L3992RFB;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -607,6 +607,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/worlddestroy/build/Debug-iphoneos",
@@ -618,7 +620,9 @@
 					"$(inherited)",
 					"/Users/zac/Development/GPUImage/build/Release-iphoneos",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = bombsaway;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -629,6 +633,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/worlddestroy/build/Debug-iphoneos",
@@ -640,7 +646,9 @@
 					"$(inherited)",
 					"/Users/zac/Development/GPUImage/build/Release-iphoneos",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = bombsaway;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

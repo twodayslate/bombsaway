@@ -46,8 +46,8 @@
     
     _ads = YES;
     
-    _links = @[@"http://prndl.us/",@"http://twitter.com/twodayslate"];
-    _linkTitles = @[@"PRNDL.us",@"@twodayslate"];
+    _links = @[@"http://twitter.com/twodayslate"];
+    _linkTitles = @[@"@twodayslate"];
     
     _sectionsArray = [[NSMutableArray alloc] init];;
     
@@ -55,7 +55,7 @@
         [_sectionsArray addObject:@"ads"];
     }
     
-    [_sectionsArray addObject:@"cities"];
+    //[_sectionsArray addObject:@"cities"];
     [_sectionsArray addObject:@"about"];
     
     // Do any additional setup after loading the view.
