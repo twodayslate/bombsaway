@@ -3,6 +3,12 @@ Bombs Away!
 
 A simple iOS game, tap to destroy!
 
+Get ready to watch the pixels fly with this highly addicting real world simulation game!
+
+Simply tap to destroy!
+
+Pick your target and watch it explode! 'Bombs Away!' has a predefined list of major cities and even your own location you can pick from. Zoom in to hit a specific target or choose to obliterate whole countries at a time.
+
 
 Todo
 ------------
